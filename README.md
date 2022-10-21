@@ -1,5 +1,7 @@
 # F1 Fantasy
 
+## It's Light Out And Away We Go!
+
 ![badmath](https://img.shields.io/badge/License-MIT-purple) ![badmath](https://img.shields.io/badge/Version-1.0-red) 
 
 ## <u>Table of Contents</u>
@@ -31,3 +33,6 @@ Direct any additional questions you have regarding this application to charanvir
 ***
 The following application is covered under the MIT License
 
+## Great Developers Who Have Worked On This Application
+
+Manveer Sohal
