@@ -10,5 +10,5 @@ Select up to 2 drivers, and track how they perform during every grandprix. Make 
 
 ## Contributions
 
-If you would like to help contribute and improve the application, please email the lead developer [here](charanvir123@gmail.com).
+If you would like to help contribute and improve the application, please email the lead developer at charanvir123@gmail.com
 
