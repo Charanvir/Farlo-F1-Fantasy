@@ -43,9 +43,9 @@ const sprintSchema = new Schema(
     }
 )
 
-sprintSchema.virtual("positionChange").get(function () {
-    const qualiPosition = this.driver.qualiRaceName.qualiFinishPosition;
-    return relativeToQuali = this.sprintRacePosition - qualiPosition;
+sprintSchema.virtual("startingPosition").get(function () {
+    const startingPosition = this.driver.qualiPositions;
+    return startingPosition;
 })
 
 const Sprint = model("Sprint", sprintSchema);

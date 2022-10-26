@@ -43,12 +43,13 @@ const raceSchema = new Schema(
     }
 )
 
-raceSchema.virtual("positionChange").get(function () {
-    const previousPosition = null;
-    if (!this.driver.sprintRaceName.sprintRacePosition) {
-        previousPosition = this.driver.qualiRaceName.qualiRacePosition
-    } else {
-        previousPosition = this.driver.sprintRaceName.sprintRacePosition
-    }
-    return relativeToPrevious = this.racePosition - previousPosition
+raceSchema.virtual("startingPosition").get(function () {
+    const startPositions = [];
+    startPositions.push(this.driver.sprint);
+    startPositions.push(this.driver.quali);
+    return startPositions;
 })
+
+const Race = model("Race", raceSchema);
+
+module.exports = Race;
