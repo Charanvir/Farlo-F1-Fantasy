@@ -18,6 +18,7 @@ const typeDefs = gql`
         quali: [Quali]
         sprint: [Sprint]
         race: [Race]
+        score: Float
     }
 
     type Quali {
@@ -56,13 +57,13 @@ const typeDefs = gql`
     }
 
     type Query {
-        allUsers: [User]
         loggedInUser: User
-        user(username: String!): User
+        allUsers: [User]
         allDrivers: [Driver]
         allQuali: [Quali]
         allSprint: [Sprint]
         allRace: [Race]
+        user(username: String!): User
         driver(driverName: String): Driver
         quali(raceName: String): Quali
         sprint(raceName: String): Sprint

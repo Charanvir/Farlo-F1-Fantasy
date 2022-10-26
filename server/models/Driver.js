@@ -29,7 +29,10 @@ const driverSchema = new Schema(
                 type: Schema.Types.ObjectId,
                 ref: "Race"
             }
-        ]
+        ],
+        score: {
+            type: Number
+        }
     },
     {
         toJSON: {

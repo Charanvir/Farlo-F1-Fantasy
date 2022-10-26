@@ -4,9 +4,6 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
     Query: {
-        allUsers: async () => {
-            return User.find().populate('driverOne').populate("driverTwo");
-        },
         loggedInUser: async (parent, args, context) => {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
@@ -14,6 +11,36 @@ const resolvers = {
 
                 return userData;
             }
+        },
+        allUsers: async () => {
+            return User.find().populate('driverOne').populate("driverTwo");
+        },
+        allDrivers: async () => {
+            return Driver.find().populate("quali").populate("sprint").populate("race");
+        },
+        allQuali: async () => {
+            return Quali.find().populate("driver");
+        },
+        allSprint: async () => {
+            return Sprint.find().populate("driver")
+        },
+        allRace: async () => {
+            return Race.find().populate("driver")
+        },
+        user: async (parent, { username }) => {
+            return User.findOne({ username }).populate("driverOne").populate("driverTwo");
+        },
+        driver: async (parent, { driverName }) => {
+            return Driver.findOne({ driverName }).populate("quali").populate("sprint").populate("race")
+        },
+        quali: async (parent, { raceName }) => {
+            return Quali.findOne({ raceName }).populate("driver")
+        },
+        sprint: async (parent, { raceName }) => {
+            return Sprint.findOne({ raceName }).populate("driver")
+        },
+        race: async (parent, { raceName }) => {
+            return Race.findOne({ raceName }).populate("driver")
         }
     },
     Mutation: {
