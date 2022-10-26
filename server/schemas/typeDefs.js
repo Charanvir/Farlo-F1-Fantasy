@@ -72,8 +72,7 @@ const typeDefs = gql`
     type Mutation {
         login(email: String!, password: String!): Auth
         signUp(username: String!, email: String!, password: String!): Auth
-        addDriver(driverName: String!): User
-        dropDriver(driverName: String!): User
+        changeDriver(drivertoAdd: String!, driverToDrop: String!): User
     }
 `
 
