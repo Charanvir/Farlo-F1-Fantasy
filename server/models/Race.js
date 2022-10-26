@@ -31,7 +31,7 @@ const raceSchema = new Schema(
         driver: [
             {
                 type: Schema.Types.ObjectId,
-                ref: "Race"
+                ref: "Driver"
             }
         ]
     },

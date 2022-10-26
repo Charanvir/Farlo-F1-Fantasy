@@ -31,7 +31,7 @@ const sprintSchema = new Schema(
         driver: [
             {
                 type: Schema.Types.ObjectId,
-                ref: "Sprint"
+                ref: "Driver"
             }
         ]
     },
@@ -43,10 +43,10 @@ const sprintSchema = new Schema(
     }
 )
 
-sprintSchema.virtual("startingPosition").get(function () {
-    const startingPosition = this.driver.qualiPositions;
-    return startingPosition;
-})
+// sprintSchema.virtual("startingPosition").get(function () {
+//     const startingPosition = this.driver.qualiPositions;
+//     return startingPosition;
+// })
 
 const Sprint = model("Sprint", sprintSchema);
 
