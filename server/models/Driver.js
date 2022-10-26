@@ -12,6 +12,12 @@ const driverSchema = new Schema(
             required: true,
             trim: true
         },
+        teammate: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "Driver"
+            }
+        ],
         quali: [
             {
                 type: Schema.Types.ObjectId,

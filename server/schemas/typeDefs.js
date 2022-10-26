@@ -15,6 +15,7 @@ const typeDefs = gql`
         _id: ID
         driverName: String
         team: String
+        teammate: [Driver]
         quali: [Quali]
         sprint: [Sprint]
         race: [Race]
