@@ -1,4 +1,4 @@
-// driver dat
+// driver data
 const VerstappenData = {
     driverName: "Max Verstappen",
     team: "Red Bull Racing",

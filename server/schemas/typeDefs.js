@@ -29,27 +29,29 @@ const typeDefs = gql`
         didNotFinish: Boolean
         aheadOfTeammage: Boolean
         roundFinish: Float
-        driver: [Driver]
+        qualiScore: Float
     }
 
     type Sprint {
+        _id: ID
         raceName: String
         sprintRacePosition: Float
         didNotFinish: Boolean
         aheadOfTeammage: Boolean
         fastestLap: Boolean
         disqualified: Boolean
-        driver: [Driver]
+        sprintScore: Float
     }
 
     type Race {
+        _id: ID
         raceName: String
         racePosition: Float
         didNotFinish: Boolean
         aheadOfTeammage: Boolean
         fastestLap: Boolean
         disqualified: Boolean
-        driver: [Driver]
+        raceScore: Float
     }
 
     type Auth {

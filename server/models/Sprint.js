@@ -27,13 +27,7 @@ const sprintSchema = new Schema(
         disqualified: {
             type: Boolean,
             required: true
-        },
-        driver: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: "Driver"
-            }
-        ]
+        }
     },
     {
         toJSON: {
@@ -43,10 +37,9 @@ const sprintSchema = new Schema(
     }
 )
 
-// sprintSchema.virtual("startingPosition").get(function () {
-//     const startingPosition = this.driver.qualiPositions;
-//     return startingPosition;
-// })
+sprintSchema.virtual("sprintScore").get(function () {
+
+})
 
 const Sprint = model("Sprint", sprintSchema);
 

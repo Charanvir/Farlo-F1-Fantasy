@@ -27,13 +27,7 @@ const raceSchema = new Schema(
         disqualified: {
             type: Boolean,
             required: true
-        },
-        driver: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: "Driver"
-            }
-        ]
+        }
     },
     {
         toJSON: {
@@ -43,11 +37,8 @@ const raceSchema = new Schema(
     }
 )
 
-raceSchema.virtual("startingPosition").get(function () {
-    const startPositions = [];
-    startPositions.push(this.driver.sprint);
-    startPositions.push(this.driver.quali);
-    return startPositions;
+raceSchema.virtual("raceScore").get(function () {
+
 })
 
 const Race = model("Race", raceSchema);
