@@ -12,6 +12,11 @@ const driverSchema = new Schema(
             required: true,
             trim: true
         },
+        teammateName: {
+            type: String,
+            required: true,
+            trim: true
+        },
         teammate: [
             {
                 type: Schema.Types.ObjectId,

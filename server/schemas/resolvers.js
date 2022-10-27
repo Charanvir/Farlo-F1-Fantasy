@@ -16,7 +16,7 @@ const resolvers = {
             return User.find().populate('driverOne').populate("driverTwo");
         },
         allDrivers: async () => {
-            return Driver.find().populate("quali").populate("sprint").populate("race");
+            return Driver.find().populate("quali").populate("sprint").populate("race").populate("teammate")
         },
         allQuali: async () => {
             return Quali.find()
@@ -31,7 +31,7 @@ const resolvers = {
             return User.findOne({ username }).populate("driverOne").populate("driverTwo");
         },
         driver: async (parent, { driverName }) => {
-            return Driver.findOne({ driverName }).populate("quali").populate("sprint").populate("race")
+            return Driver.findOne({ driverName }).populate("quali").populate("sprint").populate("race").populate("teammate")
         },
         quali: async (parent, { raceName }) => {
             return Quali.find({ raceName }).sort({ qualiScore: -1 })

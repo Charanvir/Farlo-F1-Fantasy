@@ -2,6 +2,7 @@
 const VerstappenData = {
     driverName: "Max Verstappen",
     team: "Red Bull Racing",
+    teammateName: "Sergio Perez",
     teammate: [],
     quali: [],
     sprint: [],
@@ -11,6 +12,7 @@ const VerstappenData = {
 const CharlesData = {
     driverName: "Charles Leclerc",
     team: "Ferrari",
+    teammateName: "Carlos Sainz",
     teammate: [],
     quali: [],
     sprint: [],
@@ -20,6 +22,7 @@ const CharlesData = {
 const PerezData = {
     driverName: "Sergio Perez",
     team: "Red Bull Racing",
+    teammateName: "Max Verstappen",
     teammate: [],
     quali: [],
     sprint: [],
@@ -29,6 +32,7 @@ const PerezData = {
 const RusselData = {
     driverName: "George Russel",
     team: "Mercedes",
+    teammateName: "Lewis Hamilton",
     teammate: [],
     quali: [],
     sprint: [],
@@ -38,6 +42,7 @@ const RusselData = {
 const SainzData = {
     driverName: "Carlos Sainz",
     team: "Ferrari",
+    teammateName: "Charles Leclerc",
     teammate: [],
     quali: [],
     sprint: [],
@@ -47,6 +52,7 @@ const SainzData = {
 const LewisData = {
     driverName: "Lewis Hamilton",
     team: "Mercedes",
+    teammateName: "George Russel",
     teammate: [],
     quali: [],
     sprint: [],
@@ -56,6 +62,7 @@ const LewisData = {
 const LandoData = {
     driverName: "Lando Norris",
     team: "McLaren",
+    teammateName: "Daniel Ricciardo",
     teammate: [],
     quali: [],
     sprint: [],
@@ -65,6 +72,7 @@ const LandoData = {
 const OconData = {
     driverName: "Esteban Ocon",
     team: "Alpine",
+    teammateName: "Fernando Alonso",
     teammate: [],
     quali: [],
     sprint: [],
@@ -74,6 +82,7 @@ const OconData = {
 const AlonsoData = {
     driverName: "Fernando Alonso",
     team: "Alpine",
+    teammateName: "Esteban Ocon",
     teammate: [],
     quali: [],
     sprint: [],
@@ -83,6 +92,7 @@ const AlonsoData = {
 const BottasData = {
     driverName: "Valterri Bottas",
     team: "Alfa Romeo",
+    teammateName: "Zhou Guanyu",
     teammate: [],
     quali: [],
     sprint: [],
@@ -92,6 +102,7 @@ const BottasData = {
 const VettelData = {
     driverName: "Sebastian Vettel",
     team: "Aston Martin",
+    teammateName: "Lance Stroll",
     teammate: [],
     quali: [],
     sprint: [],
@@ -101,6 +112,7 @@ const VettelData = {
 const RicciardoData = {
     driverName: "Daniel Ricciardo",
     team: "McLaren",
+    teammateName: "Lando Norris",
     teammate: [],
     quali: [],
     sprint: [],
@@ -110,6 +122,7 @@ const RicciardoData = {
 const MagnussenData = {
     driverName: "Kevin Magnussen",
     team: "Haas",
+    teammateName: "Mick Schumacher",
     teammate: [],
     quali: [],
     sprint: [],
@@ -119,6 +132,7 @@ const MagnussenData = {
 const GaslyData = {
     driverName: "Pierre Gasly",
     team: "AlphaTauri",
+    teammateName: "Yuki Tsunoda",
     teammate: [],
     quali: [],
     sprint: [],
@@ -128,6 +142,7 @@ const GaslyData = {
 const StrollData = {
     driverName: "Lance Stroll",
     team: "Aston Martin",
+    teammateName: "Sebastian Vettel",
     teammate: [],
     quali: [],
     sprint: [],
@@ -137,6 +152,7 @@ const StrollData = {
 const YukiData = {
     driverName: "Yuki Tsunoda",
     team: "AlphaTauri",
+    teammateName: "Pierre Gasly",
     teammate: [],
     quali: [],
     sprint: [],
@@ -146,6 +162,7 @@ const YukiData = {
 const MickData = {
     driverName: "Mick Schumacher",
     team: "Haas",
+    teammateName: "Kevin Magnussen",
     teammate: [],
     quali: [],
     sprint: [],
@@ -155,6 +172,7 @@ const MickData = {
 const ZhouData = {
     driverName: "Zhou Guanyu",
     team: "Alfa Romeo",
+    teammateName: "Valterri Bottas",
     teammate: [],
     quali: [],
     sprint: [],
@@ -164,6 +182,7 @@ const ZhouData = {
 const AlbonData = {
     driverName: "Alexander Albon",
     team: "Williams",
+    teammateName: "Nicholas Latifi",
     teammate: [],
     quali: [],
     sprint: [],
@@ -173,6 +192,7 @@ const AlbonData = {
 const LatifiData = {
     driverName: "Nicholas Latifi",
     team: "Williams",
+    teammateName: "Alexander Albon",
     teammate: [],
     quali: [],
     sprint: [],
@@ -182,6 +202,7 @@ const LatifiData = {
 const DeVriesData = {
     driverName: "Nyck De Vries",
     team: "Williams",
+    teammateName: "Nicholas Latifi",
     teammate: [],
     quali: [],
     sprint: [],
@@ -191,6 +212,7 @@ const DeVriesData = {
 const HulkenbergData = {
     driverName: "Nico Hulkenberg",
     team: "Aston Martin",
+    teammateName: "Lance Stroll",
     teammate: [],
     quali: [],
     sprint: [],

@@ -19,11 +19,11 @@ db.once('open', async () => {
     await User.collection.insertMany(userData);
     console.log("User Data seeded")
     await Driver.collection.insertMany(driverData)
-    console.log("Driver data seeded")
+    console.log("Driver Data seeded")
     await Quali.collection.insertMany(qualiBahrainData)
-    console.log("Bahrain Quali data seeded")
+    console.log("Bahrain Quali Data seeded")
     await Race.collection.insertMany(raceBahrainData)
-    console.log("Bahrain Race data seeded")
+    console.log("Bahrain Race Data seeded")
 
     for (let i = 0; i < driverData.length; i++) {
         await Quali.find({ driverName: driverData[i].driverName }, async (error, data) => {
@@ -40,7 +40,15 @@ db.once('open', async () => {
                 { new: true }
             )
         }).clone();
+        await Driver.find({ driverName: driverData[i].teammateName }, async (error, data) => {
+            await Driver.findOneAndUpdate(
+                { driverName: driverData[i].driverName },
+                { $push: { teammate: data } },
+                { new: true }
+            )
+        }).clone();
     }
+    console.log("Populated Data Seeded")
 
 
 
