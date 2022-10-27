@@ -40,7 +40,7 @@ const resolvers = {
             return Sprint.find({ raceName })
         },
         race: async (parent, { raceName }) => {
-            return Race.find({ raceName })
+            return Race.find({ raceName }).sort({ raceScore: -1 })
         }
     },
     Mutation: {

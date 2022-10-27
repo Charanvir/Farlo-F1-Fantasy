@@ -25,6 +25,25 @@ db.once('open', async () => {
     await Race.collection.insertMany(raceBahrainData)
     console.log("Bahrain Race data seeded")
 
+    for (let i = 0; i < driverData.length; i++) {
+        await Quali.find({ driverName: driverData[i].driverName }, async (error, data) => {
+            await Driver.findOneAndUpdate(
+                { driverName: driverData[i].driverName },
+                { $addToSet: { quali: data } },
+                { new: true }
+            )
+        }).clone();
+        await Race.find({ driverName: driverData[i].driverName }, async (error, data) => {
+            await Driver.findOneAndUpdate(
+                { driverName: driverData[i].driverName },
+                { $addToSet: { race: data } },
+                { new: true }
+            )
+        }).clone();
+    }
+
+
+
     console.log("Database seeded")
     process.exit(0)
 })

@@ -46,13 +46,6 @@ const raceSchema = new Schema(
     }
 )
 
-// raceFinish: true = 1
-// relativePositionToStart: 2X
-// aheadOfTeammate: true = 3, false = -3
-// fastestLap: true = 5
-// didNotFinish: true = -5
-// disqualified: true = -20
-
 raceSchema.virtual("raceScore").get(async function () {
     let score = 0;
     relativePositioning = this.racePosition - this.startPosition
