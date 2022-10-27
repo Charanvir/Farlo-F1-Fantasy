@@ -24,10 +24,11 @@ const typeDefs = gql`
 
     type Quali {
         _id: ID
+        driverName: String
         raceName: String
         qualiFinishPosition: Float
         didNotFinish: Boolean
-        aheadOfTeammage: Boolean
+        aheadOfTeammate: Boolean
         roundFinish: Float
         qualiScore: Float
     }
@@ -68,9 +69,9 @@ const typeDefs = gql`
         allRace: [Race]
         user(username: String!): User
         driver(driverName: String): Driver
-        quali(raceName: String): Quali
-        sprint(raceName: String): Sprint
-        race(raceName: String): Race
+        quali(raceName: String): [Quali]
+        sprint(raceName: String): [Sprint]
+        race(raceName: String): [Race]
     }
 
     type Mutation {

@@ -2,6 +2,11 @@ const { Schema, model } = require("mongoose");
 
 const qualiSchema = new Schema(
     {
+        driverName: {
+            type: String,
+            required: true,
+            trim: true
+        },
         raceName: {
             type: String,
             required: true,
@@ -56,7 +61,7 @@ qualiSchema.virtual("qualiScore").get(function () {
             break;
     }
     if (this.didNotFinish) {
-        score - + 5;
+        score - 5;
     }
     switch (this.qualiFinishPosition) {
         case 1:

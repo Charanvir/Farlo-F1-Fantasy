@@ -19,13 +19,13 @@ const resolvers = {
             return Driver.find().populate("quali").populate("sprint").populate("race");
         },
         allQuali: async () => {
-            return Quali.find().populate("driver");
+            return Quali.find()
         },
         allSprint: async () => {
-            return Sprint.find().populate("driver")
+            return Sprint.find()
         },
         allRace: async () => {
-            return Race.find().populate("driver")
+            return Race.find()
         },
         user: async (parent, { username }) => {
             return User.findOne({ username }).populate("driverOne").populate("driverTwo");
@@ -34,13 +34,14 @@ const resolvers = {
             return Driver.findOne({ driverName }).populate("quali").populate("sprint").populate("race")
         },
         quali: async (parent, { raceName }) => {
-            return Quali.findOne({ raceName }).populate("driver")
+            console.log(raceName)
+            return Quali.find({ raceName }).sort({ qualiScore: -1 })
         },
         sprint: async (parent, { raceName }) => {
-            return Sprint.findOne({ raceName }).populate("driver")
+            return Sprint.find({ raceName })
         },
         race: async (parent, { raceName }) => {
-            return Race.findOne({ raceName }).populate("driver")
+            return Race.find({ raceName })
         }
     },
     Mutation: {

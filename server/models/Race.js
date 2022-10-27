@@ -2,6 +2,11 @@ const { Schema, model } = require("mongoose");
 
 const raceSchema = new Schema(
     {
+        driverName: {
+            type: String,
+            required: true,
+            trim: true
+        },
         raceName: {
             type: String,
             required: true,
