@@ -34,7 +34,6 @@ const resolvers = {
             return Driver.findOne({ driverName }).populate("quali").populate("sprint").populate("race")
         },
         quali: async (parent, { raceName }) => {
-            console.log(raceName)
             return Quali.find({ raceName }).sort({ qualiScore: -1 })
         },
         sprint: async (parent, { raceName }) => {

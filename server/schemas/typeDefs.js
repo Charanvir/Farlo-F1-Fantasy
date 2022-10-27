@@ -38,7 +38,7 @@ const typeDefs = gql`
         raceName: String
         sprintRacePosition: Float
         didNotFinish: Boolean
-        aheadOfTeammage: Boolean
+        aheadOfTeammate: Boolean
         fastestLap: Boolean
         disqualified: Boolean
         sprintScore: Float
@@ -46,12 +46,14 @@ const typeDefs = gql`
 
     type Race {
         _id: ID
+        driverName: String
         raceName: String
         racePosition: Float
         didNotFinish: Boolean
-        aheadOfTeammage: Boolean
+        aheadOfTeammate: Boolean
         fastestLap: Boolean
         disqualified: Boolean
+        startPosition: Float
         raceScore: Float
     }
 
