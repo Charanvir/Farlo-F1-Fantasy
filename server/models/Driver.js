@@ -50,7 +50,7 @@ const driverSchema = new Schema(
     }
 )
 
-driverSchema.virtual("driverScore").get(async function () {
+driverSchema.virtual("driverScore").get(function () {
     let score = 0;
     let qualiData = this.quali;
     for (let i = 0; i < qualiData.length; i++) {

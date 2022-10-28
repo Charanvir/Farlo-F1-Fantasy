@@ -13,7 +13,31 @@ const resolvers = {
             }
         },
         allUsers: async () => {
-            return User.find().populate('driverOne').populate("driverTwo");
+            return User.find()
+                .populate({
+                    path: "driverOne",
+                    populate: {
+                        path: "quali"
+                    }
+                })
+                .populate({
+                    path: "driverOne",
+                    populate: {
+                        path: "race"
+                    }
+                })
+                .populate({
+                    path: "driverTwo",
+                    populate: {
+                        path: "quali"
+                    }
+                })
+                .populate({
+                    path: "driverTwo",
+                    populate: {
+                        path: "race"
+                    }
+                })
         },
         allDrivers: async () => {
             return Driver.find().populate("quali").populate("sprint").populate("race").populate("teammate")
@@ -29,8 +53,30 @@ const resolvers = {
         },
         user: async (parent, { username }) => {
             return User.findOne({ username })
-                .populate("driverOne")
-                .populate("driverTwo")
+                .populate({
+                    path: "driverOne",
+                    populate: {
+                        path: "quali"
+                    }
+                })
+                .populate({
+                    path: "driverOne",
+                    populate: {
+                        path: "race"
+                    }
+                })
+                .populate({
+                    path: "driverTwo",
+                    populate: {
+                        path: "quali"
+                    }
+                })
+                .populate({
+                    path: "driverTwo",
+                    populate: {
+                        path: "race"
+                    }
+                })
         },
         driver: async (parent, { driverName }) => {
             return Driver.findOne({ driverName }).populate("quali").populate("sprint").populate("race").populate("teammate")

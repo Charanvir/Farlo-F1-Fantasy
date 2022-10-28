@@ -80,7 +80,7 @@ const qualiSaudiData = [
         roundFinish: 3
     },
     {
-        driverName: "Estaban Ocon",
+        driverName: "Esteban Ocon",
         raceName: "Saudi",
         qualiFinishPosition: 5,
         didNotFinish: false,

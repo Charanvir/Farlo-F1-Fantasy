@@ -9,6 +9,7 @@ const typeDefs = gql`
         driverOne: [Driver]
         driverTwo: [Driver]
         score: Float
+        userScore: Float
     }
 
     type Driver {

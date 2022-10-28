@@ -42,6 +42,13 @@ const userSchema = new Schema(
     }
 );
 
+userSchema.virtual("userScore").get(function () {
+    let driverOneScore = this.driverOne[0].driverScore;
+    let driverTwoScore = this.driverTwo[0].driverScore;
+    let userScore = driverOneScore + driverTwoScore
+    return userScore;
+})
+
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {
         const saltRounds = 10;
