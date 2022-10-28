@@ -60,9 +60,6 @@ qualiSchema.virtual("qualiScore").get(function () {
             score -= 2;
             break;
     }
-    if (this.didNotFinish) {
-        score - 5;
-    }
     switch (this.qualiFinishPosition) {
         case 1:
             score += 10;
@@ -97,6 +94,9 @@ qualiSchema.virtual("qualiScore").get(function () {
         default:
             score += 0;
             break;
+    }
+    if (this.didNotFinish) {
+        score = -5;
     }
     return score;
 })

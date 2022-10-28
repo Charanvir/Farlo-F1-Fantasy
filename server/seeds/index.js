@@ -5,7 +5,7 @@ const driverData = require("./driverData");
 
 // Quali Data
 const qualiBahrainData = require("./qualiData/qualiBahrain");
-
+const qualiSaudiData = require("./qualiData/qualiSaudi")
 // Sprint Data
 
 // Race Data
@@ -30,6 +30,8 @@ db.once('open', async () => {
     // Inserting Quali Data
     await Quali.collection.insertMany(qualiBahrainData);
     console.log("Bahrain Quali Data seeded");
+    await Quali.collection.insertMany(qualiSaudiData);
+    console.log("Saudi Quali Data seeded")
 
     // Inserting Sprint Data
 

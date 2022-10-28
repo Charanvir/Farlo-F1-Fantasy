@@ -1,5 +1,3 @@
-const { Quali, Sprint } = require("../../models/index");
-
 const raceBahrainData = [
     {
         driverName: "Charles Leclerc",

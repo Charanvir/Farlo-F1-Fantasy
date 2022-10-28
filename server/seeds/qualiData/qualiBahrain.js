@@ -33,7 +33,7 @@ const qualiBahrainData = [
     },
     {
         driverName: "Lewis Hamilton",
-        raceName: "Mercedes",
+        raceName: "Bahrain",
         qualiFinishPosition: 5,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -120,7 +120,7 @@ const qualiBahrainData = [
         roundFinish: 2
     },
     {
-        driverName: "Yuki Tsunida",
+        driverName: "Yuki Tsunoda",
         raceName: "Bahrain",
         qualiFinishPosition: 16,
         didNotFinish: false,
