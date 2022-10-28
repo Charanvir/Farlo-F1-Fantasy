@@ -10,6 +10,7 @@ const qualiSaudiData = require("./qualiData/qualiSaudi")
 
 // Race Data
 const raceBahrainData = require("./raceData/raceBahrain");
+const raceSaudiData = require("./raceData/raceSaudi")
 
 // adding the data to the database
 db.once('open', async () => {
@@ -38,6 +39,8 @@ db.once('open', async () => {
     // Inserting Race Data
     await Race.collection.insertMany(raceBahrainData);
     console.log("Bahrain Race Data seeded");
+    await Race.collection.insertMany(raceSaudiData);
+    console.log("Saudi Race Data seeded");
 
 
     for (let i = 0; i < driverData.length; i++) {
