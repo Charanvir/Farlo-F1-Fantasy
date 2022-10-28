@@ -32,7 +32,7 @@ const userSchema = new Schema(
             }
         ],
         score: {
-            type: Number,
+            type: Number
         }
     },
     {

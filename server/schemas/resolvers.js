@@ -28,7 +28,9 @@ const resolvers = {
             return Race.find()
         },
         user: async (parent, { username }) => {
-            return User.findOne({ username }).populate("driverOne").populate("driverTwo");
+            return User.findOne({ username })
+                .populate("driverOne")
+                .populate("driverTwo")
         },
         driver: async (parent, { driverName }) => {
             return Driver.findOne({ driverName }).populate("quali").populate("sprint").populate("race").populate("teammate")
