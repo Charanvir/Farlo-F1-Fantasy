@@ -20,7 +20,7 @@ const typeDefs = gql`
         quali: [Quali]
         sprint: [Sprint]
         race: [Race]
-        score: Float
+        driverScore: Float
     }
 
     type Quali {

@@ -46,7 +46,7 @@ const raceSchema = new Schema(
     }
 )
 
-raceSchema.virtual("raceScore").get(async function () {
+raceSchema.virtual("raceScore").get(function () {
     let score = 0;
     relativePositioning = this.racePosition - this.startPosition
     score = score + (-relativePositioning * 2);

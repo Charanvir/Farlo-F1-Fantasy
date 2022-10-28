@@ -40,10 +40,7 @@ const driverSchema = new Schema(
                 type: Schema.Types.ObjectId,
                 ref: "Race"
             }
-        ],
-        score: {
-            type: Number
-        }
+        ]
     },
     {
         toJSON: {
@@ -52,6 +49,19 @@ const driverSchema = new Schema(
         }
     }
 )
+
+driverSchema.virtual("driverScore").get(async function () {
+    let score = 0;
+    let qualiData = this.quali;
+    for (let i = 0; i < qualiData.length; i++) {
+        score += qualiData[i].qualiScore
+    }
+    let raceData = this.race;
+    for (let i = 0; i < raceData.length; i++) {
+        score += raceData[i].raceScore
+    }
+    return score;
+})
 
 const Driver = model("Driver", driverSchema);
 

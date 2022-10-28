@@ -1,8 +1,14 @@
 const db = require("../config/connection");
 const { User, Driver, Quali, Sprint, Race } = require("../models/index");
 const userData = require('./userData');
-const driverData = require("./driverData")
+const driverData = require("./driverData");
+
+// Quali Data
 const qualiBahrainData = require("./qualiData/qualiBahrain");
+
+// Sprint Data
+
+// Race Data
 const raceBahrainData = require("./raceData/raceBahrain");
 
 // adding the data to the database
@@ -13,17 +19,24 @@ db.once('open', async () => {
     await Sprint.deleteMany();
     await Race.deleteMany();
 
-
-
-
+    // inserting User Data
     await User.collection.insertMany(userData);
-    console.log("User Data seeded")
-    await Driver.collection.insertMany(driverData)
-    console.log("Driver Data seeded")
-    await Quali.collection.insertMany(qualiBahrainData)
-    console.log("Bahrain Quali Data seeded")
-    await Race.collection.insertMany(raceBahrainData)
-    console.log("Bahrain Race Data seeded")
+    console.log("User Data seeded");
+
+    // inserting Driver Data
+    await Driver.collection.insertMany(driverData);
+    console.log("Driver Data seeded");
+
+    // Inserting Quali Data
+    await Quali.collection.insertMany(qualiBahrainData);
+    console.log("Bahrain Quali Data seeded");
+
+    // Inserting Sprint Data
+
+    // Inserting Race Data
+    await Race.collection.insertMany(raceBahrainData);
+    console.log("Bahrain Race Data seeded");
+
 
     for (let i = 0; i < driverData.length; i++) {
         await Quali.find({ driverName: driverData[i].driverName }, async (error, data) => {
@@ -48,10 +61,10 @@ db.once('open', async () => {
             )
         }).clone();
     }
-    console.log("Populated Data Seeded")
+    console.log("Populated Data Seeded");
 
 
 
-    console.log("Database seeded")
-    process.exit(0)
-})
+    console.log("Database seeded");
+    process.exit(0);
+});
