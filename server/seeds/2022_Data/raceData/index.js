@@ -3,6 +3,7 @@ const raceSaudiData = require("./raceSaudi");
 const raceAustraliaData = require("./raceAustralia");
 const raceImolaData = require("./raceImola");
 const raceMiamiData = require("./raceMiami");
+const raceSpainData = require("./raceSpain")
 
 const allRaceData = [];
 allRaceData.push(
@@ -10,7 +11,8 @@ allRaceData.push(
     raceSaudiData,
     raceAustraliaData,
     raceImolaData,
-    raceMiamiData
+    raceMiamiData,
+    raceSpainData
 );
 
 module.exports = allRaceData;
