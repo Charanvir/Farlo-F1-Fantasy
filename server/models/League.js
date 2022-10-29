@@ -29,6 +29,7 @@ const leagueSchema = new Schema(
 
 leagueSchema.virtual("standings").get(function () {
     let users = this.users;
+    users.sort((a, b) => b.userScore - a.userScore);
     return users;
 });
 

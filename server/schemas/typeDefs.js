@@ -17,6 +17,7 @@ const typeDefs = gql`
         leagueName: String
         year: Float
         users: [User]
+        standings: [User]
     }
 
     type Driver {
