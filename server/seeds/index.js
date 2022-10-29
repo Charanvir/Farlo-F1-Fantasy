@@ -1,14 +1,15 @@
 const db = require("../config/connection");
-const { User, Driver, Quali, Sprint, Race } = require("../models/index");
-const userData = require('./userData');
-const driverData = require("./driverData");
+const { User, Driver, Quali, Sprint, Race, League } = require("../models/index");
+const leagueData = require("./2022_Data/leagueData");
+const userData = require('./2022_Data/userData');
+const driverData = require("./2022_Data/driverData");
 
 // Quali Data
-const allQualiData = require("./qualiData/index")
+const allQualiData = require("./2022_Data/qualiData/index");
 // Sprint Data
-const allSprintData = require("./sprintData/index")
+const allSprintData = require("./2022_Data/sprintData/index");
 // Race Data
-const allRaceData = require("./raceData/index")
+const allRaceData = require("./2022_Data/raceData/index");
 
 // adding the data to the database
 db.once('open', async () => {
@@ -17,6 +18,12 @@ db.once('open', async () => {
     await Quali.deleteMany();
     await Sprint.deleteMany();
     await Race.deleteMany();
+    await League.deleteMany();
+
+    // inserting League Data
+    await League.collection.insertMany(leagueData);
+    console.log("League Data Seeded")
+    console.log("***************************************");
 
     // inserting User Data
     await User.collection.insertMany(userData);

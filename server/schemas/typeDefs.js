@@ -12,6 +12,13 @@ const typeDefs = gql`
         userScore: Float
     }
 
+    type League {
+        _id: ID
+        leagueName: String
+        year: Float
+        users: [User]
+    }
+
     type Driver {
         _id: ID
         driverName: String
@@ -67,6 +74,7 @@ const typeDefs = gql`
 
     type Query {
         loggedInUser: User
+        allLeagues: [League]
         allUsers: [User]
         allDrivers: [Driver]
         allQuali: [Quali]

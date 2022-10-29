@@ -1,4 +1,4 @@
-const { User, Driver, Quali, Sprint, Race } = require("../models");
+const { User, Driver, Quali, Sprint, Race, League } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 
@@ -11,6 +11,9 @@ const resolvers = {
 
                 return userData;
             }
+        },
+        allLeagues: async () => {
+            return League.find()
         },
         allUsers: async () => {
             return User.find()
