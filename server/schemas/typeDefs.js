@@ -37,12 +37,13 @@ const typeDefs = gql`
 
     type Sprint {
         _id: ID
+        driverName: String
         raceName: String
         sprintRacePosition: Float
         didNotFinish: Boolean
         aheadOfTeammate: Boolean
-        fastestLap: Boolean
         disqualified: Boolean
+        startPosition: Float
         sprintScore: Float
     }
 

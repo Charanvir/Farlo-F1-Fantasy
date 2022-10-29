@@ -45,7 +45,7 @@ const userSchema = new Schema(
 userSchema.virtual("userScore").get(function () {
     let driverOneScore = this.driverOne[0].driverScore;
     let driverTwoScore = this.driverTwo[0].driverScore;
-    let userScore = driverOneScore + driverTwoScore
+    let userScore = driverOneScore + driverTwoScore;
     return userScore;
 })
 

@@ -23,6 +23,12 @@ const resolvers = {
                 .populate({
                     path: "driverOne",
                     populate: {
+                        path: "sprint"
+                    }
+                })
+                .populate({
+                    path: "driverOne",
+                    populate: {
                         path: "race"
                     }
                 })
@@ -30,6 +36,12 @@ const resolvers = {
                     path: "driverTwo",
                     populate: {
                         path: "quali"
+                    }
+                })
+                .populate({
+                    path: "driverTwo",
+                    populate: {
+                        path: "sprint"
                     }
                 })
                 .populate({
@@ -62,6 +74,12 @@ const resolvers = {
                 .populate({
                     path: "driverOne",
                     populate: {
+                        path: "sprint"
+                    }
+                })
+                .populate({
+                    path: "driverOne",
+                    populate: {
                         path: "race"
                     }
                 })
@@ -69,6 +87,12 @@ const resolvers = {
                     path: "driverTwo",
                     populate: {
                         path: "quali"
+                    }
+                })
+                .populate({
+                    path: "driverTwo",
+                    populate: {
+                        path: "sprint"
                     }
                 })
                 .populate({

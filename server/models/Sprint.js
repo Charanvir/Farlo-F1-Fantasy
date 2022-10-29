@@ -25,12 +25,12 @@ const sprintSchema = new Schema(
             type: Boolean,
             required: true
         },
-        fastestLap: {
+        disqualified: {
             type: Boolean,
             required: true
         },
-        disqualified: {
-            type: Boolean,
+        startPosition: {
+            type: Number,
             required: true
         }
     },
@@ -43,7 +43,46 @@ const sprintSchema = new Schema(
 )
 
 sprintSchema.virtual("sprintScore").get(function () {
-
+    let score = 0;
+    relativePositioning = this.sprintRacePosition - this.startPosition;
+    score = score + (-relativePositioning * 2);
+    switch (this.aheadOfTeammate) {
+        case true:
+            score += 3;
+            break;
+        case false:
+            score -= 3;
+            break;
+    }
+    if (this.disqualified) {
+        score -= 20;
+    }
+    switch (this.sprintRacePosition) {
+        case 1:
+            score += 5;
+            break;
+        case 2:
+            score += 4;
+            break;
+        case 3:
+            score += 3;
+            break;
+        case 4:
+            score += 2;
+            break;
+        case 5:
+            score += 1;
+            break;
+        default:
+            score = score;
+            break;
+    }
+    if (this.didNotFinish) {
+        score = -5;
+    } else {
+        score += 1;
+    }
+    return score;
 })
 
 const Sprint = model("Sprint", sprintSchema);

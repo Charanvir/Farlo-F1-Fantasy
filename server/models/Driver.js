@@ -56,6 +56,10 @@ driverSchema.virtual("driverScore").get(function () {
     for (let i = 0; i < qualiData.length; i++) {
         score += qualiData[i].qualiScore
     }
+    let sprintData = this.sprint;
+    for (let i = 0; i < sprintData.length; i++) {
+        score += sprintData[i].sprintScore
+    }
     let raceData = this.race;
     for (let i = 0; i < raceData.length; i++) {
         score += raceData[i].raceScore
