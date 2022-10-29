@@ -1,6 +1,8 @@
 const sprintImolaData = require("./sprintImola");
 
 const allSprintData = [];
-allSprintData.push(sprintImolaData);
+allSprintData.push(
+    sprintImolaData
+);
 
 module.exports = allSprintData;
