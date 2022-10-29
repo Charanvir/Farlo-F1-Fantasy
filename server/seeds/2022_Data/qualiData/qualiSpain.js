@@ -1,7 +1,7 @@
 const qualiSpainData = [
     {
         driverName: "Charles Leclerc",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 1,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -9,7 +9,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Carlos Sainz",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 3,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -17,7 +17,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Max Verstappen",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 2,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -25,7 +25,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Sergio Perez",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 5,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -33,7 +33,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Lewis Hamilton",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 6,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -41,7 +41,7 @@ const qualiSpainData = [
     },
     {
         driverName: "George Russel",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 4,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -49,7 +49,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Valterri Bottas",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 7,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -57,7 +57,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Zhou Guanyu",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 15,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -65,7 +65,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Kevin Magnussen",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 8,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -73,7 +73,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Mick Schumacher",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 10,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -81,7 +81,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Fernando Alonso",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 17,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -89,7 +89,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Esteban Ocon",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 12,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -97,7 +97,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Pierre Gasly",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 14,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -105,7 +105,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Yuki Tsunoda",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 13,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -113,7 +113,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Lando Norris",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 11,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -121,7 +121,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Daniel Ricciardo",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 9,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -129,7 +129,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Alexander Albon",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 19,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -137,7 +137,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Nicholas Latifi",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 20,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -145,7 +145,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Sebastian Vettel",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 16,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -153,7 +153,7 @@ const qualiSpainData = [
     },
     {
         driverName: "Lance Stroll",
-        raceName: "Saudi",
+        raceName: "Spain",
         qualiFinishPosition: 18,
         didNotFinish: false,
         aheadOfTeammate: false,

@@ -1,7 +1,7 @@
 const raceSpainData = [
     {
         driverName: "Charles Leclerc",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 20,
         didNotFinish: true,
         aheadOfTeammate: false,
@@ -11,7 +11,7 @@ const raceSpainData = [
     },
     {
         driverName: "Carlos Sainz",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 4,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -21,7 +21,7 @@ const raceSpainData = [
     },
     {
         driverName: "Max Verstappen",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 1,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -31,7 +31,7 @@ const raceSpainData = [
     },
     {
         driverName: "Sergio Perez",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 2,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -41,7 +41,7 @@ const raceSpainData = [
     },
     {
         driverName: "Lewis Hamilton",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 5,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -51,7 +51,7 @@ const raceSpainData = [
     },
     {
         driverName: "George Russel",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 3,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -61,7 +61,7 @@ const raceSpainData = [
     },
     {
         driverName: "Valterri Bottas",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 6,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -71,7 +71,7 @@ const raceSpainData = [
     },
     {
         driverName: "Zhou Guanyu",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 19,
         didNotFinish: true,
         aheadOfTeammate: false,
@@ -81,7 +81,7 @@ const raceSpainData = [
     },
     {
         driverName: "Kevin Magnussen",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 17,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -91,7 +91,7 @@ const raceSpainData = [
     },
     {
         driverName: "Mick Schumacher",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 14,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -101,7 +101,7 @@ const raceSpainData = [
     },
     {
         driverName: "Fernando Alonso",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 9,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -111,7 +111,7 @@ const raceSpainData = [
     },
     {
         driverName: "Esteban Ocon",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 7,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -121,7 +121,7 @@ const raceSpainData = [
     },
     {
         driverName: "Pierre Gasly",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 13,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -131,7 +131,7 @@ const raceSpainData = [
     },
     {
         driverName: "Yuki Tsunoda",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 10,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -141,7 +141,7 @@ const raceSpainData = [
     },
     {
         driverName: "Lando Norris",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 8,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -151,7 +151,7 @@ const raceSpainData = [
     },
     {
         driverName: "Daniel Ricciardo",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 12,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -161,7 +161,7 @@ const raceSpainData = [
     },
     {
         driverName: "Alexander Albon",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 18,
         didNotFinish: false,
         aheadOfTeammate: false,
@@ -171,7 +171,7 @@ const raceSpainData = [
     },
     {
         driverName: "Nicholas Latifi",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 16,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -181,7 +181,7 @@ const raceSpainData = [
     },
     {
         driverName: "Sebastian Vettel",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 11,
         didNotFinish: false,
         aheadOfTeammate: true,
@@ -191,7 +191,7 @@ const raceSpainData = [
     },
     {
         driverName: "Lance Stroll",
-        raceName: "Saudi",
+        raceName: "Spain",
         racePosition: 15,
         didNotFinish: false,
         aheadOfTeammate: false,
