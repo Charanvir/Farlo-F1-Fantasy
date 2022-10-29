@@ -14,6 +14,60 @@ const resolvers = {
         },
         allLeagues: async () => {
             return League.find()
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverOne",
+                        populate: {
+                            path: "quali"
+                        }
+                    }
+                })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverOne",
+                        populate: {
+                            path: "sprint"
+                        }
+                    }
+                })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverOne",
+                        populate: {
+                            path: "race"
+                        }
+                    }
+                })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverTwo",
+                        populate: {
+                            path: "quali"
+                        }
+                    }
+                })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverTwo",
+                        populate: {
+                            path: "sprint"
+                        }
+                    }
+                })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverTwo",
+                        populate: {
+                            path: "race"
+                        }
+                    }
+                })
         },
         allUsers: async () => {
             return User.find()

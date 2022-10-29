@@ -189,6 +189,18 @@ db.once('open', async () => {
     console.log("Drivers Added to Users")
     console.log("***************************************");
 
+    for (let i = 0; i < userData.length; i++) {
+        await User.find({ username: userData[i].username }, async (error, data) => {
+            await League.findOneAndUpdate(
+                { leagueName: "Farlo Fantasy" },
+                { $addToSet: { users: data } },
+                { new: true }
+            )
+        }).clone();
+    }
+    console.log("Users Added to League");
+    console.log("***************************************");
+
     console.log("Database seeded");
     console.log("***************************************");
     process.exit(0);
