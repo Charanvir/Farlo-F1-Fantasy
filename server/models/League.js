@@ -12,6 +12,10 @@ const leagueSchema = new Schema(
             min: 2022,
             default: new Date().getFullYear()
         },
+        inviteCode: {
+            type: Number,
+            required: true
+        },
         users: [
             {
                 type: Schema.Types.ObjectId,

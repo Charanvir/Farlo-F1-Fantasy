@@ -27,11 +27,13 @@ const raceSchema = new Schema(
         },
         fastestLap: {
             type: Boolean,
-            required: true
+            required: true,
+            default: false
         },
         disqualified: {
             type: Boolean,
-            required: true
+            required: true,
+            default: false
         },
         startPosition: {
             type: Number,

@@ -5,6 +5,7 @@ const qualiImolaData = require("./qualiImola");
 const qualiMiamiData = require("./qualiMiami");
 const qualiSpainData = require("./qualiSpain");
 const qualiMonacoData = require("./qualiMonaco");
+const qualiBakuData = require("./qualiBaku");
 
 const allQualiData = [];
 allQualiData.push(
@@ -14,7 +15,8 @@ allQualiData.push(
     qualiImolaData,
     qualiMiamiData,
     qualiSpainData,
-    qualiMonacoData
+    qualiMonacoData,
+    qualiBakuData
 );
 
 module.exports = allQualiData;

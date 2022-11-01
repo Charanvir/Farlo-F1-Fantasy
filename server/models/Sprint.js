@@ -27,7 +27,8 @@ const sprintSchema = new Schema(
         },
         disqualified: {
             type: Boolean,
-            required: true
+            required: true,
+            default: false
         },
         startPosition: {
             type: Number,

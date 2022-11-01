@@ -81,6 +81,7 @@ const typeDefs = gql`
         allQuali: [Quali]
         allSprint: [Sprint]
         allRace: [Race]
+        league(inviteCode: Float!): League
         user(username: String!): User
         driver(driverName: String): Driver
         quali(raceName: String): [Quali]

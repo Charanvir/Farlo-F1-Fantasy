@@ -19,7 +19,8 @@ const qualiSchema = new Schema(
         },
         didNotFinish: {
             type: Boolean,
-            required: true
+            required: true,
+            default: false
         },
         aheadOfTeammate: {
             type: Boolean,
