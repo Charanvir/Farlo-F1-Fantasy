@@ -4,7 +4,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -13,7 +12,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -22,7 +20,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -31,7 +28,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -40,7 +36,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -49,7 +44,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -58,7 +52,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -67,7 +60,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -76,7 +68,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -85,7 +76,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -94,7 +84,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -103,7 +92,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -112,7 +100,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -121,7 +108,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -130,7 +116,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -139,7 +124,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -148,7 +132,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -157,7 +140,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -166,7 +148,6 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // },
 // {
@@ -175,6 +156,5 @@
 //             sprintRacePosition: ,
 //     didNotFinish: ,
 //         aheadOfTeammate: ,
-//     disqualified: ,
 //         startPosition:
 // }
