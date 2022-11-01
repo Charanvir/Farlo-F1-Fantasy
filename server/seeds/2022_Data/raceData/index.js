@@ -6,6 +6,8 @@ const raceMiamiData = require("./raceMiami");
 const raceSpainData = require("./raceSpain");
 const raceMonacoData = require("./raceMonaco");
 const raceBakuData = require("./raceBaku");
+const raceCanadaData = require("./raceCanada");
+const raceSilverstoneData = require("./raceSilverstone");
 
 const allRaceData = [];
 allRaceData.push(
@@ -16,7 +18,9 @@ allRaceData.push(
     raceMiamiData,
     raceSpainData,
     raceMonacoData,
-    raceBakuData
+    raceBakuData,
+    raceCanadaData,
+    raceSilverstoneData
 );
 
 module.exports = allRaceData;
