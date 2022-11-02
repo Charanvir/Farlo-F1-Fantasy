@@ -17,6 +17,10 @@ const driverSchema = new Schema(
             required: true,
             trim: true
         },
+        drafted: {
+            type: Boolean,
+            required: true
+        },
         teammate: [
             {
                 type: Schema.Types.ObjectId,

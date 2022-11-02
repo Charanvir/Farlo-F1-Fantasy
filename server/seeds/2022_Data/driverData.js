@@ -6,7 +6,8 @@ const VerstappenData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const CharlesData = {
@@ -16,7 +17,8 @@ const CharlesData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const PerezData = {
@@ -26,7 +28,8 @@ const PerezData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const RusselData = {
@@ -36,7 +39,8 @@ const RusselData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const SainzData = {
@@ -46,7 +50,8 @@ const SainzData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const LewisData = {
@@ -56,7 +61,8 @@ const LewisData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const LandoData = {
@@ -66,7 +72,8 @@ const LandoData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const OconData = {
@@ -76,7 +83,8 @@ const OconData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const AlonsoData = {
@@ -86,7 +94,8 @@ const AlonsoData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const BottasData = {
@@ -96,7 +105,8 @@ const BottasData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const VettelData = {
@@ -106,7 +116,8 @@ const VettelData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: false
 };
 
 const RicciardoData = {
@@ -116,7 +127,8 @@ const RicciardoData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const MagnussenData = {
@@ -126,7 +138,8 @@ const MagnussenData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const GaslyData = {
@@ -136,7 +149,8 @@ const GaslyData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const StrollData = {
@@ -146,7 +160,8 @@ const StrollData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: true
 };
 
 const YukiData = {
@@ -156,7 +171,8 @@ const YukiData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: false
 };
 
 const MickData = {
@@ -166,7 +182,8 @@ const MickData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: false
 };
 
 const ZhouData = {
@@ -176,7 +193,8 @@ const ZhouData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: false
 };
 
 const AlbonData = {
@@ -186,7 +204,8 @@ const AlbonData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: false
 };
 
 const LatifiData = {
@@ -196,7 +215,8 @@ const LatifiData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: false
 };
 
 const DeVriesData = {
@@ -206,7 +226,8 @@ const DeVriesData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: false
 };
 
 const HulkenbergData = {
@@ -216,7 +237,8 @@ const HulkenbergData = {
     teammate: [],
     quali: [],
     sprint: [],
-    score: 0
+    score: 0,
+    drafted: false
 };
 
 const driverData = [];
