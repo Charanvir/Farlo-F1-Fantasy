@@ -2,143 +2,143 @@ const qualiJapanData = [
     {
         driverName: "Charles Leclerc",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 2,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "Carlos Sainz",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 3,
+        aheadOfTeammate: false,
+        roundFinish: 3
+    },
     {
         driverName: "Max Verstappen",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 1,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "Sergio Perez",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 4,
+        aheadOfTeammate: false,
+        roundFinish: 3
+    },
     {
         driverName: "Lewis Hamilton",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 6,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "George Russel",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 8,
+        aheadOfTeammate: false,
+        roundFinish: 3
+    },
     {
         driverName: "Valterri Bottas",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 12,
+        aheadOfTeammate: true,
+        roundFinish: 2
+    },
     {
         driverName: "Zhou Guanyu",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 14,
+        aheadOfTeammate: false,
+        roundFinish: 2
+    },
     {
         driverName: "Kevin Magnussen",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 18,
+        aheadOfTeammate: false,
+        roundFinish: 1
+    },
     {
         driverName: "Mick Schumacher",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 15,
+        aheadOfTeammate: true,
+        roundFinish: 2
+    },
     {
         driverName: "Fernando Alonso",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 7,
+        aheadOfTeammate: false,
+        roundFinish: 3
+    },
     {
         driverName: "Esteban Ocon",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 5,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "Pierre Gasly",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 17,
+        aheadOfTeammate: false,
+        roundFinish: 1
+    },
     {
         driverName: "Yuki Tsunoda",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 13,
+        aheadOfTeammate: true,
+        roundFinish: 2
+    },
     {
         driverName: "Lando Norris",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 10,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "Daniel Ricciardo",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 11,
+        aheadOfTeammate: false,
+        roundFinish: 2
+    },
     {
         driverName: "Alexander Albon",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 16,
+        aheadOfTeammate: true,
+        roundFinish: 1
+    },
     {
         driverName: "Nicholas Latifi",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 20,
+        aheadOfTeammate: false,
+        roundFinish: 1
+    },
     {
         driverName: "Sebastian Vettel",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 9,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "Lance Stroll",
         raceName: "Japan",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-}
+        qualiFinishPosition: 19,
+        aheadOfTeammate: false,
+        roundFinish: 1
+    }
 ];
 
 module.exports = qualiJapanData;

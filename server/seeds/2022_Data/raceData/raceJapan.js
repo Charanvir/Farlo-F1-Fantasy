@@ -2,163 +2,164 @@ const raceJapanData = [
     {
         driverName: "Charles Leclerc",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 3,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 2
+    },
     {
         driverName: "Carlos Sainz",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 19,
+        didNotFinish: true,
+        aheadOfTeammate: false,
+        startPosition: 3
+    },
     {
         driverName: "Max Verstappen",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 1,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 1
+    },
     {
         driverName: "Sergio Perez",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 2,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 4
+    },
     {
         driverName: "Lewis Hamilton",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 5,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 6
+    },
     {
         driverName: "George Russel",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 8,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 8
+    },
     {
         driverName: "Valterri Bottas",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 15,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 12
+    },
     {
         driverName: "Zhou Guanyu",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 16,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        fastestLap: true,
+        startPosition: 14
+    },
     {
         driverName: "Kevin Magnussen",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 14,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 17
+    },
     {
         driverName: "Mick Schumacher",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 17,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 15
+    },
     {
         driverName: "Fernando Alonso",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 7,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 7
+    },
     {
         driverName: "Esteban Ocon",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 4,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 5
+    },
     {
         driverName: "Pierre Gasly",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 18,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 20
+    },
     {
         driverName: "Yuki Tsunoda",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 13,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 13
+    },
     {
         driverName: "Lando Norris",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 10,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 10
+    },
     {
         driverName: "Daniel Ricciardo",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 11,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 11
+    },
     {
         driverName: "Alexander Albon",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 20,
+        didNotFinish: true,
+        aheadOfTeammate: false,
+        startPosition: 16
+    },
     {
         driverName: "Nicholas Latifi",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 9,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 19
+    },
     {
         driverName: "Sebastian Vettel",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 6,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 9
+    },
     {
         driverName: "Lance Stroll",
         raceName: "Japan",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-}
+        racePosition: 12,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 18
+    }
 ];
 
 module.exports = raceJapanData;

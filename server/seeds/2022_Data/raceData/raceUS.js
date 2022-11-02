@@ -2,163 +2,164 @@ const raceUSData = [
     {
         driverName: "Charles Leclerc",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 3,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 12
+    },
     {
         driverName: "Carlos Sainz",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 20,
+        didNotFinish: true,
+        aheadOfTeammate: false,
+        startPosition: 1
+    },
     {
         driverName: "Max Verstappen",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 1,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 2
+    },
     {
         driverName: "Sergio Perez",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 4,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 9
+    },
     {
         driverName: "Lewis Hamilton",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 2,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 3
+    },
     {
         driverName: "George Russel",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 5,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        fastestLap: true,
+        startPosition: 4
+    },
     {
         driverName: "Valterri Bottas",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 19,
+        didNotFinish: true,
+        aheadOfTeammate: false,
+        startPosition: 7
+    },
     {
         driverName: "Zhou Guanyu",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 12,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 18
+    },
     {
         driverName: "Kevin Magnussen",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 9,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 13
+    },
     {
         driverName: "Mick Schumacher",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 15,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 16
+    },
     {
         driverName: "Fernando Alonso",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 7,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 14
+    },
     {
         driverName: "Esteban Ocon",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 11,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 20
+    },
     {
         driverName: "Pierre Gasly",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 14,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 11
+    },
     {
         driverName: "Yuki Tsunoda",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 10,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 19
+    },
     {
         driverName: "Lando Norris",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 6,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 6
+    },
     {
         driverName: "Daniel Ricciardo",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 16,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 15
+    },
     {
         driverName: "Alexander Albon",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 13,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 8
+    },
     {
         driverName: "Nicholas Latifi",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 17,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 17
+    },
     {
         driverName: "Sebastian Vettel",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 8,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 10
+    },
     {
         driverName: "Lance Stroll",
         raceName: "US",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-}
+        racePosition: 18,
+        didNotFinish: true,
+        aheadOfTeammate: false,
+        startPosition: 5
+    }
 ];
 
 module.exports = raceUSData;
