@@ -2,143 +2,143 @@ const qualiMonzaData = [
     {
         driverName: "Charles Leclerc",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 1,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "Carlos Sainz",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 3,
+        aheadOfTeammate: false,
+        roundFinish: 3
+    },
     {
         driverName: "Max Verstappen",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 2,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "Sergio Perez",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 4,
+        aheadOfTeammate: false,
+        roundFinish: 3
+    },
     {
         driverName: "Lewis Hamilton",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 5,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "George Russel",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 6,
+        aheadOfTeammate: false,
+        roundFinish: 3
+    },
     {
         driverName: "Valterri Bottas",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 12,
+        aheadOfTeammate: true,
+        roundFinish: 2
+    },
     {
         driverName: "Zhou Guanyu",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 14,
+        aheadOfTeammate: false,
+        roundFinish: 2
+    },
     {
         driverName: "Kevin Magnussen",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 19,
+        aheadOfTeammate: true,
+        roundFinish: 1
+    },
     {
         driverName: "Mick Schumacher",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 20,
+        aheadOfTeammate: false,
+        roundFinish: 1
+    },
     {
         driverName: "Fernando Alonso",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 10,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "Esteban Ocon",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 11,
+        aheadOfTeammate: false,
+        roundFinish: 2
+    },
     {
         driverName: "Pierre Gasly",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 9,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "Yuki Tsunoda",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 15,
+        aheadOfTeammate: false,
+        roundFinish: 2
+    },
     {
         driverName: "Lando Norris",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 7,
+        aheadOfTeammate: true,
+        roundFinish: 3
+    },
     {
         driverName: "Daniel Ricciardo",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 8,
+        aheadOfTeammate: false,
+        roundFinish: 3
+    },
     {
-        driverName: "Alexander Albon",
+        driverName: "Nyck De Vries",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 13,
+        aheadOfTeammate: true,
+        roundFinish: 2
+    },
     {
         driverName: "Nicholas Latifi",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 16,
+        aheadOfTeammate: false,
+        roundFinish: 1
+    },
     {
         driverName: "Sebastian Vettel",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-},
+        qualiFinishPosition: 17,
+        aheadOfTeammate: true,
+        roundFinish: 1
+    },
     {
         driverName: "Lance Stroll",
         raceName: "Monza",
-        qualiFinishPosition: ,
-        aheadOfTeammate: ,
-        roundFinish: 
-}
+        qualiFinishPosition: 18,
+        aheadOfTeammate: false,
+        roundFinish: 1
+    }
 ];
 
 module.exports = qualiMonzaData;

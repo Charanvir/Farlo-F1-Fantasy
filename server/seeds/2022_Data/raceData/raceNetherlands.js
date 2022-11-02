@@ -2,163 +2,164 @@ const raceNetherlandsData = [
     {
         driverName: "Charles Leclerc",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 3,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 2
+    },
     {
         driverName: "Carlos Sainz",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 8,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 3
+    },
     {
         driverName: "Max Verstappen",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 1,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        fastestLap: true,
+        startPosition: 1
+    },
     {
         driverName: "Sergio Perez",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 5,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 5
+    },
     {
         driverName: "Lewis Hamilton",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 4,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 4
+    },
     {
         driverName: "George Russel",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 2,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 6
+    },
     {
         driverName: "Valterri Bottas",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 19,
+        didNotFinish: true,
+        aheadOfTeammate: false,
+        startPosition: 16
+    },
     {
         driverName: "Zhou Guanyu",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 16,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 14
+    },
     {
         driverName: "Kevin Magnussen",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 15,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 18
+    },
     {
         driverName: "Mick Schumacher",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 13,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 8
+    },
     {
         driverName: "Fernando Alonso",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 6,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 13
+    },
     {
         driverName: "Esteban Ocon",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 9,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 12
+    },
     {
         driverName: "Pierre Gasly",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 11,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 11
+    },
     {
         driverName: "Yuki Tsunoda",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 20,
+        didNotFinish: true,
+        aheadOfTeammate: false,
+        startPosition: 9
+    },
     {
         driverName: "Lando Norris",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 7,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 7
+    },
     {
         driverName: "Daniel Ricciardo",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 17,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 17
+    },
     {
         driverName: "Alexander Albon",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 12,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 15
+    },
     {
         driverName: "Nicholas Latifi",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 18,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 20
+    },
     {
         driverName: "Sebastian Vettel",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-},
+        racePosition: 14,
+        didNotFinish: false,
+        aheadOfTeammate: false,
+        startPosition: 19
+    },
     {
         driverName: "Lance Stroll",
         raceName: "Netherlands",
-        racePosition: ,
-        didNotFinish: ,
-        aheadOfTeammate: ,
-        startPosition: 
-}
+        racePosition: 10,
+        didNotFinish: false,
+        aheadOfTeammate: true,
+        startPosition: 10
+    }
 ];
 
 module.exports = raceNetherlandsData;
