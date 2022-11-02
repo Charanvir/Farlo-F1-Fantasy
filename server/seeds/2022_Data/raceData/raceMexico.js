@@ -1,7 +1,7 @@
-const raceJapanData = [
+const raceMexicoData = [
     {
         driverName: "Charles Leclerc",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -9,7 +9,7 @@ const raceJapanData = [
 },
     {
         driverName: "Carlos Sainz",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -17,7 +17,7 @@ const raceJapanData = [
 },
     {
         driverName: "Max Verstappen",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -25,7 +25,7 @@ const raceJapanData = [
 },
     {
         driverName: "Sergio Perez",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -33,7 +33,7 @@ const raceJapanData = [
 },
     {
         driverName: "Lewis Hamilton",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -41,7 +41,7 @@ const raceJapanData = [
 },
     {
         driverName: "George Russel",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -49,7 +49,7 @@ const raceJapanData = [
 },
     {
         driverName: "Valterri Bottas",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -57,7 +57,7 @@ const raceJapanData = [
 },
     {
         driverName: "Zhou Guanyu",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -65,7 +65,7 @@ const raceJapanData = [
 },
     {
         driverName: "Kevin Magnussen",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -73,7 +73,7 @@ const raceJapanData = [
 },
     {
         driverName: "Mick Schumacher",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -81,7 +81,7 @@ const raceJapanData = [
 },
     {
         driverName: "Fernando Alonso",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -89,7 +89,7 @@ const raceJapanData = [
 },
     {
         driverName: "Esteban Ocon",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -97,7 +97,7 @@ const raceJapanData = [
 },
     {
         driverName: "Pierre Gasly",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -105,7 +105,7 @@ const raceJapanData = [
 },
     {
         driverName: "Yuki Tsunoda",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -113,7 +113,7 @@ const raceJapanData = [
 },
     {
         driverName: "Lando Norris",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -121,7 +121,7 @@ const raceJapanData = [
 },
     {
         driverName: "Daniel Ricciardo",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -129,7 +129,7 @@ const raceJapanData = [
 },
     {
         driverName: "Alexander Albon",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -137,7 +137,7 @@ const raceJapanData = [
 },
     {
         driverName: "Nicholas Latifi",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -145,7 +145,7 @@ const raceJapanData = [
 },
     {
         driverName: "Sebastian Vettel",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -153,7 +153,7 @@ const raceJapanData = [
 },
     {
         driverName: "Lance Stroll",
-        raceName: "Japan",
+        raceName: "Mexico",
         racePosition: ,
         didNotFinish: ,
         aheadOfTeammate: ,
@@ -161,4 +161,4 @@ const raceJapanData = [
 }
 ];
 
-module.exports = raceJapanData;
+module.exports = raceMexicoData;

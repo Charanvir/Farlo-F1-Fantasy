@@ -11,6 +11,13 @@ const raceSilverstoneData = require("./raceSilverstone");
 const raceAustriaData = require("./raceAustria");
 const raceFranceData = require("./raceFrance");
 const raceHungaryData = require("./raceHungary");
+const raceBelgiumData = require("./raceBelgium")
+const raceNetherlandsData = require("./raceNetherlands");
+const raceMonzaData = require("./raceMonza");
+const raceSingaporeData = require("./raceSingapore");
+const raceJapanData = require("./raceJapan");
+const raceUSData = require("./raceUS");
+const raceMexicoData = require("./raceMexico");
 
 const allRaceData = [];
 allRaceData.push(
@@ -27,7 +34,13 @@ allRaceData.push(
     raceAustriaData,
     raceFranceData,
     raceHungaryData,
-
+    raceBelgiumData,
+    raceNetherlandsData,
+    raceMonzaData,
+    raceSingaporeData,
+    raceJapanData,
+    raceUSData,
+    raceMexicoData
 );
 
 module.exports = allRaceData;
