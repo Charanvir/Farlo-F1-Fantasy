@@ -10,6 +10,7 @@ const qualiCanadaData = require("./qualiCanada");
 const qualiSilverstoneData = require("./qualiSilverstone");
 const qualiAustriaData = require("./qualiAustria");
 const qualiFranceData = require("./qualiFrance");
+const qualiHungaryData = require("./qualiHungary");
 
 const allQualiData = [];
 allQualiData.push(
@@ -25,6 +26,7 @@ allQualiData.push(
     qualiSilverstoneData,
     qualiAustriaData,
     qualiFranceData,
+    qualiHungaryData,
 
 );
 
