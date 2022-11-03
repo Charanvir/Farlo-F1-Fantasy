@@ -20,21 +20,12 @@ const userSchema = new Schema(
             minLength: 8,
             trim: true
         },
-        driverOne: [
+        teams: [
             {
                 type: Schema.Types.ObjectId,
-                ref: 'Driver'
+                ref: "Team"
             }
-        ],
-        driverTwo: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Driver'
-            }
-        ],
-        score: {
-            type: Number
-        }
+        ]
     },
     {
         toJSON: {
@@ -43,12 +34,6 @@ const userSchema = new Schema(
     }
 );
 
-userSchema.virtual("userScore").get(function () {
-    let driverOneScore = this.driverOne[0].driverScore;
-    let driverTwoScore = this.driverTwo[0].driverScore;
-    let userScore = driverOneScore + driverTwoScore;
-    return userScore;
-})
 
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {

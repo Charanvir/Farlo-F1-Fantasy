@@ -1,4 +1,4 @@
-const { User, Driver, Quali, Sprint, Race, League } = require("../models");
+const { User, Driver, Quali, Sprint, Race, League, Team } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 
@@ -15,7 +15,7 @@ const resolvers = {
         allLeagues: async () => {
             return League.find()
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverOne",
                         populate: {
@@ -24,7 +24,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverOne",
                         populate: {
@@ -33,7 +33,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverOne",
                         populate: {
@@ -42,7 +42,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverTwo",
                         populate: {
@@ -51,7 +51,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverTwo",
                         populate: {
@@ -60,7 +60,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverTwo",
                         populate: {
@@ -72,39 +72,57 @@ const resolvers = {
         allUsers: async () => {
             return User.find()
                 .populate({
-                    path: "driverOne",
+                    path: "teams",
                     populate: {
-                        path: "quali"
+                        path: "driverOne",
+                        populate: {
+                            path: "quali"
+                        }
                     }
                 })
                 .populate({
-                    path: "driverOne",
+                    path: "teams",
                     populate: {
-                        path: "sprint"
+                        path: "driverOne",
+                        populate: {
+                            path: "sprint"
+                        }
                     }
                 })
                 .populate({
-                    path: "driverOne",
+                    path: "teams",
                     populate: {
-                        path: "race"
+                        path: "driverOne",
+                        populate: {
+                            path: "race"
+                        }
                     }
                 })
                 .populate({
-                    path: "driverTwo",
+                    path: "teams",
                     populate: {
-                        path: "quali"
+                        path: "driverTwo",
+                        populate: {
+                            path: "quali"
+                        }
                     }
                 })
                 .populate({
-                    path: "driverTwo",
+                    path: "teams",
                     populate: {
-                        path: "sprint"
+                        path: "driverTwo",
+                        populate: {
+                            path: "sprint"
+                        }
                     }
                 })
                 .populate({
-                    path: "driverTwo",
+                    path: "teams",
                     populate: {
-                        path: "race"
+                        path: "driverTwo",
+                        populate: {
+                            path: "race"
+                        }
                     }
                 })
         },
@@ -123,7 +141,7 @@ const resolvers = {
         leagueInviteCode: async (parent, { inviteCode }) => {
             return League.findOne({ inviteCode })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverOne",
                         populate: {
@@ -132,7 +150,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverOne",
                         populate: {
@@ -141,7 +159,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverOne",
                         populate: {
@@ -150,7 +168,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverTwo",
                         populate: {
@@ -159,7 +177,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverTwo",
                         populate: {
@@ -168,7 +186,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverTwo",
                         populate: {
@@ -180,7 +198,7 @@ const resolvers = {
         pastLeagueResults: async (parent, { leagueName, year }) => {
             return League.findOne({ leagueName, year })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverOne",
                         populate: {
@@ -189,7 +207,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverOne",
                         populate: {
@@ -198,7 +216,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverOne",
                         populate: {
@@ -207,7 +225,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverTwo",
                         populate: {
@@ -216,7 +234,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverTwo",
                         populate: {
@@ -225,7 +243,7 @@ const resolvers = {
                     }
                 })
                 .populate({
-                    path: "users",
+                    path: "teams",
                     populate: {
                         path: "driverTwo",
                         populate: {
@@ -237,39 +255,57 @@ const resolvers = {
         user: async (parent, { username }) => {
             return User.findOne({ username })
                 .populate({
-                    path: "driverOne",
+                    path: "teams",
                     populate: {
-                        path: "quali"
+                        path: "driverOne",
+                        populate: {
+                            path: "quali"
+                        }
                     }
                 })
                 .populate({
-                    path: "driverOne",
+                    path: "teams",
                     populate: {
-                        path: "sprint"
+                        path: "driverOne",
+                        populate: {
+                            path: "sprint"
+                        }
                     }
                 })
                 .populate({
-                    path: "driverOne",
+                    path: "teams",
                     populate: {
-                        path: "race"
+                        path: "driverOne",
+                        populate: {
+                            path: "race"
+                        }
                     }
                 })
                 .populate({
-                    path: "driverTwo",
+                    path: "teams",
                     populate: {
-                        path: "quali"
+                        path: "driverTwo",
+                        populate: {
+                            path: "quali"
+                        }
                     }
                 })
                 .populate({
-                    path: "driverTwo",
+                    path: "teams",
                     populate: {
-                        path: "sprint"
+                        path: "driverTwo",
+                        populate: {
+                            path: "sprint"
+                        }
                     }
                 })
                 .populate({
-                    path: "driverTwo",
+                    path: "teams",
                     populate: {
-                        path: "race"
+                        path: "driverTwo",
+                        populate: {
+                            path: "race"
+                        }
                     }
                 })
         },

@@ -1,8 +1,9 @@
 const db = require("../config/connection");
-const { User, Driver, Quali, Sprint, Race, League } = require("../models/index");
+const { User, Driver, Quali, Sprint, Race, League, Team } = require("../models/index");
 const leagueData = require("./2022_Data/leagueData");
 const userData = require('./2022_Data/userData');
 const driverData = require("./2022_Data/driverData");
+const teamData = require("./2022_Data/teamData")
 
 // Quali Data
 const allQualiData = require("./2022_Data/qualiData/index");
@@ -14,6 +15,7 @@ const allRaceData = require("./2022_Data/raceData/index");
 // adding the data to the database
 db.once('open', async () => {
     await User.deleteMany();
+    await Team.deleteMany();
     await Driver.deleteMany();
     await Quali.deleteMany();
     await Sprint.deleteMany();
@@ -33,6 +35,11 @@ db.once('open', async () => {
     // inserting Driver Data
     await Driver.collection.insertMany(driverData);
     console.log("Driver Data Seeded");
+    console.log("***************************************");
+
+    // inserting Team Data
+    await Team.collection.insertMany(teamData);
+    console.log("Team Data Seeded");
     console.log("***************************************");
 
     // Inserting Quali Data
@@ -87,118 +94,212 @@ db.once('open', async () => {
     console.log("Populated Data Seeded");
     console.log("***************************************");
 
-    // Added Drivers to Users
+    // Added Drivers to Team
     await Driver.find({ driverName: "Lewis Hamilton" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "randeep" },
+        await Team.findOneAndUpdate(
+            { teamName: "Randeeps Team" },
             { $push: { driverOne: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Fernando Alonso" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "randeep" },
+        await Team.findOneAndUpdate(
+            { teamName: "Randeeps Team" },
             { $push: { driverTwo: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Max Verstappen" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "jaskaran" },
+        await Team.findOneAndUpdate(
+            { teamName: "Jaskarans Team" },
             { $push: { driverOne: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Lance Stroll" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "jaskaran" },
+        await Team.findOneAndUpdate(
+            { teamName: "Jaskarans Team" },
             { $push: { driverTwo: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Carlos Sainz" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "manroop" },
+        await Team.findOneAndUpdate(
+            { teamName: "Manroops Team" },
             { $push: { driverOne: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Kevin Magnussen" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "manroop" },
+        await Team.findOneAndUpdate(
+            { teamName: "Manroops Team" },
             { $push: { driverTwo: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Charles Leclerc" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "charanvir" },
+        await Team.findOneAndUpdate(
+            { teamName: "Charanvirs Team" },
             { $push: { driverOne: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Esteban Ocon" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "charanvir" },
+        await Team.findOneAndUpdate(
+            { teamName: "Charanvirs Team" },
             { $push: { driverTwo: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Pierre Gasly" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "joe" },
+        await Team.findOneAndUpdate(
+            { teamName: "Joes Team" },
             { $push: { driverOne: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Daniel Ricciardo" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "joe" },
+        await Team.findOneAndUpdate(
+            { teamName: "Joes Team" },
             { $push: { driverTwo: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Sergio Perez" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "gaganvir" },
+        await Team.findOneAndUpdate(
+            { teamName: "Gaganvirs Team" },
             { $push: { driverOne: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Valterri Bottas" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "gaganvir" },
+        await Team.findOneAndUpdate(
+            { teamName: "Gaganvirs Team" },
             { $push: { driverTwo: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "George Russel" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "gurvir" },
+        await Team.findOneAndUpdate(
+            { teamName: "Gurvirs Team" },
             { $push: { driverOne: data } },
             { new: true }
         )
     }).clone();
     await Driver.find({ driverName: "Lando Norris" }, async (error, data) => {
-        await User.findOneAndUpdate(
-            { username: "gurvir" },
+        await Team.findOneAndUpdate(
+            { teamName: "Gurvirs Team" },
             { $push: { driverTwo: data } },
             { new: true }
         )
     }).clone();
-    console.log("Drivers Added to Users")
+    console.log("Drivers Added to Teams")
     console.log("***************************************");
 
-    for (let i = 0; i < userData.length; i++) {
-        await User.find({ username: userData[i].username }, async (error, data) => {
-            await League.findOneAndUpdate(
-                { leagueName: "Farlo Fantasy" },
-                { $push: { users: data } },
-                { new: true }
-            )
-        }).clone();
-    }
-    console.log("Users Added to League");
+    // inserting Teams to Users
+    await Team.find({ teamName: "Charanvirs Team" }, async (error, data) => {
+        await User.findOneAndUpdate(
+            { username: "charanvir" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Randeeps Team" }, async (error, data) => {
+        await User.findOneAndUpdate(
+            { username: "randeep" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Joes Team" }, async (error, data) => {
+        await User.findOneAndUpdate(
+            { username: "joe" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Gurvirs Team" }, async (error, data) => {
+        await User.findOneAndUpdate(
+            { username: "gurvir" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Gaganvirs Team" }, async (error, data) => {
+        await User.findOneAndUpdate(
+            { username: "gaganvir" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Jaskarans Team" }, async (error, data) => {
+        await User.findOneAndUpdate(
+            { username: "jaskaran" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Manroops Team" }, async (error, data) => {
+        await User.findOneAndUpdate(
+            { username: "manroop" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    console.log("Teams Added to Users")
+    console.log("***************************************");
+
+    // inserting teams to League
+    await Team.find({ teamName: "Charanvirs Team" }, async (error, data) => {
+        await League.findOneAndUpdate(
+            { inviteCode: "1q2w3e4r5t" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Randeeps Team" }, async (error, data) => {
+        await League.findOneAndUpdate(
+            { inviteCode: "1q2w3e4r5t" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Joes Team" }, async (error, data) => {
+        await League.findOneAndUpdate(
+            { inviteCode: "1q2w3e4r5t" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Gurvirs Team" }, async (error, data) => {
+        await League.findOneAndUpdate(
+            { inviteCode: "1q2w3e4r5t" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Gaganvirs Team" }, async (error, data) => {
+        await League.findOneAndUpdate(
+            { inviteCode: "1q2w3e4r5t" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Jaskarans Team" }, async (error, data) => {
+        await League.findOneAndUpdate(
+            { inviteCode: "1q2w3e4r5t" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    await Team.find({ teamName: "Manroops Team" }, async (error, data) => {
+        await League.findOneAndUpdate(
+            { inviteCode: "1q2w3e4r5t" },
+            { $addToSet: { teams: data } },
+            { new: true }
+        )
+    }).clone();
+    console.log("Teams Added to League");
     console.log("***************************************");
 
     console.log("Database seeded");

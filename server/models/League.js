@@ -17,10 +17,10 @@ const leagueSchema = new Schema(
             required: true,
             min: 8
         },
-        users: [
+        teams: [
             {
                 type: Schema.Types.ObjectId,
-                ref: "User"
+                ref: "Team"
             }
         ]
     },
@@ -33,9 +33,9 @@ const leagueSchema = new Schema(
 );
 
 leagueSchema.virtual("standings").get(function () {
-    let users = this.users;
-    users.sort((a, b) => b.userScore - a.userScore);
-    return users;
+    let teams = this.teams;
+    teams.sort((a, b) => b.teamScore - a.teamScore);
+    return teams;
 });
 
 const League = model("League", leagueSchema);

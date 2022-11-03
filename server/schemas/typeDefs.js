@@ -6,18 +6,23 @@ const typeDefs = gql`
         _id: ID
         username: String
         email: String
+        teams: [Team]
+    }
+
+    type Team {
+        _id: ID
+        teamName: String
         driverOne: [Driver]
         driverTwo: [Driver]
-        score: Float
-        userScore: Float
+        teamScore: Float
     }
 
     type League {
         _id: ID
         leagueName: String
         year: Float
-        users: [User]
-        standings: [User]
+        teams: [Team]
+        standings: [Team]
     }
 
     type Driver {
@@ -78,6 +83,7 @@ const typeDefs = gql`
         loggedInUser: User
         allLeagues: [League]
         allUsers: [User]
+        allTeams: [Team]
         allDrivers: [Driver]
         allQuali: [Quali]
         allSprint: [Sprint]
@@ -85,6 +91,7 @@ const typeDefs = gql`
         leagueInviteCode(inviteCode: String!): League
         pastLeagueResults(leagueName: String, year: Float): League
         user(username: String!): User
+        team(teamName: String!): Team
         driver(driverName: String): Driver
         quali(raceName: String): [Quali]
         sprint(raceName: String): [Sprint]
