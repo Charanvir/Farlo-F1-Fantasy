@@ -347,23 +347,40 @@ const resolvers = {
             const token = signToken(user)
             return { token, user }
         },
-        createLeague: async (parents, { leagueName, inviteCode }, context) => {
-            const user = await User.find(context.user)
+        createLeague: async (parents, { leagueName, inviteCode, teamName }, context) => {
             if (context.user) {
-                const newLeague = await League.create({ leagueName, inviteCode, users: user })
+                const newTeam = await Team.create({ teamName, driverOne: [], driverTwo: [] })
+                await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $addToSet: { teams: newTeam } },
+                    { new: true }
+                )
+                const newLeague = await League.create({ leagueName, inviteCode, teams: newTeam })
                 return newLeague
             } else {
                 throw new AuthenticationError("User must be logged in to create a new league")
             }
+
         },
-        joinLeague: async (parents, { inviteCode }, context) => {
+        joinLeague: async (parents, { inviteCode, teamName }, context) => {
             if (context.user) {
-                const league = await League.findOneAndUpdate(
-                    { inviteCode },
-                    { $push: { users: context.user } },
+                const newTeam = await Team.create({ teamName, driverOne: [], driverTwo: [] })
+                await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $addToSet: { teams: newTeam } },
                     { new: true }
                 )
-                return league
+                const leagueToJoin = await League.findOne({ inviteCode })
+                if (leagueToJoin.teams.length > 10) {
+                    throw new AuthenticationError("League has reached the maximum amount of teams allowed (10 teams)")
+                } else {
+                    await League.findOneAndUpdate(
+                        { inviteCode },
+                        { $addToSet: { teams: newTeam } },
+                        { new: true }
+                    )
+                }
+                return leagueToJoin
             } else {
                 throw new AuthenticationError("User must be logged in to create a new league")
             }

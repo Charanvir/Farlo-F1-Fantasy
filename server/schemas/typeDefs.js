@@ -102,8 +102,8 @@ const typeDefs = gql`
     type Mutation {
         login(email: String!, password: String!): Auth
         signUp(username: String!, email: String!, password: String!): Auth
-        createLeague(leagueName: String!, inviteCode: String!): League
-        joinLeague(inviteCode: String!): League
+        createLeague(leagueName: String!, inviteCode: String!, teamName: String!): League
+        joinLeague(inviteCode: String!, teamName: String!): League
     }
 `
 
