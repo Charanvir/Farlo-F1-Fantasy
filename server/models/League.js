@@ -13,8 +13,9 @@ const leagueSchema = new Schema(
             default: new Date().getFullYear()
         },
         inviteCode: {
-            type: Number,
-            required: true
+            type: String,
+            required: true,
+            min: 8
         },
         users: [
             {

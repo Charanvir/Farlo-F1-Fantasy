@@ -82,7 +82,7 @@ const typeDefs = gql`
         allQuali: [Quali]
         allSprint: [Sprint]
         allRace: [Race]
-        leagueInviteCode(inviteCode: Float!): League
+        leagueInviteCode(inviteCode: String!): League
         pastLeagueResults(leagueName: String, year: Float): League
         user(username: String!): User
         driver(driverName: String): Driver
@@ -95,8 +95,8 @@ const typeDefs = gql`
     type Mutation {
         login(email: String!, password: String!): Auth
         signUp(username: String!, email: String!, password: String!): Auth
-        createLeague(leagueName: String!, inviteCode: Float!): League
-
+        createLeague(leagueName: String!, inviteCode: String!): League
+        joinLeague(inviteCode: String!): League
     }
 `
 

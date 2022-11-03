@@ -317,7 +317,19 @@ const resolvers = {
                 const newLeague = await League.create({ leagueName, inviteCode, users: user })
                 return newLeague
             } else {
-                console.log("User must be logged in to create a new league")
+                throw new AuthenticationError("User must be logged in to create a new league")
+            }
+        },
+        joinLeague: async (parents, { inviteCode }, context) => {
+            if (context.user) {
+                const league = await League.findOneAndUpdate(
+                    { inviteCode },
+                    { $push: { users: context.user } },
+                    { new: true }
+                )
+                return league
+            } else {
+                throw new AuthenticationError("User must be logged in to create a new league")
             }
         }
     }
