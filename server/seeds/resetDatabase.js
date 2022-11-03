@@ -1,7 +1,8 @@
 const db = require("../config/connection");
-const { User, Driver, Quali, Sprint, Race } = require("../models");
+const { User, Driver, Quali, Sprint, Race, League } = require("../models");
 
 db.once('open', async () => {
+    await League.deleteMany({});
     await User.deleteMany({});
     await Driver.deleteMany({});
     await Quali.deleteMany({});

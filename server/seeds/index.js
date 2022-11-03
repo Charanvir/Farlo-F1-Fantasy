@@ -26,7 +26,7 @@ db.once('open', async () => {
     console.log("***************************************");
 
     // inserting User Data
-    await User.collection.insertMany(userData);
+    await User.create(userData);
     console.log("User Data Seeded");
     console.log("***************************************");
 
@@ -193,7 +193,7 @@ db.once('open', async () => {
         await User.find({ username: userData[i].username }, async (error, data) => {
             await League.findOneAndUpdate(
                 { leagueName: "Farlo Fantasy" },
-                { $addToSet: { users: data } },
+                { $push: { users: data } },
                 { new: true }
             )
         }).clone();

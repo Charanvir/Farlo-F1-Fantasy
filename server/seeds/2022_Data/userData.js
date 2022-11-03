@@ -2,7 +2,7 @@
 const CharanvirData = {
     username: "charanvir",
     email: "charanvir@gmail.com",
-    password: "charanvir",
+    password: "charanvir123",
     driverOne: [],
     driverTwo: [],
     score: 0
@@ -10,7 +10,7 @@ const CharanvirData = {
 const RandeepData = {
     username: "randeep",
     email: "randeep@gmail.com",
-    password: "randeep",
+    password: "randeep123",
     driverOne: [],
     driverTwo: [],
     score: 0
@@ -18,7 +18,7 @@ const RandeepData = {
 const GurvirData = {
     username: "gurvir",
     email: "gurvir@gmail.com",
-    password: "gurvir",
+    password: "gurvir123",
     driverOne: [],
     driverTwo: [],
     score: 0
@@ -26,7 +26,7 @@ const GurvirData = {
 const JoeData = {
     username: "joe",
     email: "joe@gmail.com",
-    password: "joe",
+    password: "joe12345",
     driverOne: [],
     driverTwo: [],
     score: 0
@@ -34,7 +34,7 @@ const JoeData = {
 const GaganvirData = {
     username: "gaganvir",
     email: "gaganvir@gmail.com",
-    password: "gaganvir",
+    password: "gaganvir123",
     driverOne: [],
     driverTwo: [],
     score: 0
@@ -42,7 +42,7 @@ const GaganvirData = {
 const JaskaranData = {
     username: "jaskaran",
     email: "jaskaran@gmail.com",
-    password: "jaskaran",
+    password: "jaskaran123",
     driverOne: [],
     driverTwo: [],
     score: 0
@@ -50,7 +50,7 @@ const JaskaranData = {
 const ManroopData = {
     username: "manroop",
     email: "manroop@gmail.com",
-    password: "manroop",
+    password: "manroop123",
     driverOne: [],
     driverTwo: [],
     score: 0

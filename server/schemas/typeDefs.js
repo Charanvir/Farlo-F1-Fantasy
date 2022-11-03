@@ -23,7 +23,8 @@ const typeDefs = gql`
     type Driver {
         _id: ID
         driverName: String
-        team: String
+        team: String,
+        drafted: Boolean
         teammateName: String
         teammate: [Driver]
         quali: [Quali]
@@ -81,18 +82,21 @@ const typeDefs = gql`
         allQuali: [Quali]
         allSprint: [Sprint]
         allRace: [Race]
-        league(inviteCode: Float!): League
+        leagueInviteCode(inviteCode: Float!): League
+        pastLeagueResults(leagueName: String, year: Float): League
         user(username: String!): User
         driver(driverName: String): Driver
         quali(raceName: String): [Quali]
         sprint(raceName: String): [Sprint]
         race(raceName: String): [Race]
+        freeAgents: [Driver]
     }
 
     type Mutation {
         login(email: String!, password: String!): Auth
         signUp(username: String!, email: String!, password: String!): Auth
-        changeDriver(drivertoAdd: String!, driverToDrop: String!): User
+        createLeague(leagueName: String!, inviteCode: Float!): League
+
     }
 `
 

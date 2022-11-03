@@ -120,8 +120,65 @@ const resolvers = {
         allRace: async () => {
             return Race.find()
         },
-        league: async (parent, { inviteCode }) => {
+        leagueInviteCode: async (parent, { inviteCode }) => {
             return League.findOne({ inviteCode })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverOne",
+                        populate: {
+                            path: "quali"
+                        }
+                    }
+                })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverOne",
+                        populate: {
+                            path: "sprint"
+                        }
+                    }
+                })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverOne",
+                        populate: {
+                            path: "race"
+                        }
+                    }
+                })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverTwo",
+                        populate: {
+                            path: "quali"
+                        }
+                    }
+                })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverTwo",
+                        populate: {
+                            path: "sprint"
+                        }
+                    }
+                })
+                .populate({
+                    path: "users",
+                    populate: {
+                        path: "driverTwo",
+                        populate: {
+                            path: "race"
+                        }
+                    }
+                })
+        },
+        pastLeagueResults: async (parent, { leagueName, year }) => {
+            return League.findOne({ leagueName, year })
                 .populate({
                     path: "users",
                     populate: {
@@ -220,13 +277,20 @@ const resolvers = {
             return Driver.findOne({ driverName }).populate("quali").populate("sprint").populate("race").populate("teammate")
         },
         quali: async (parent, { raceName }) => {
-            return Quali.find({ raceName }).sort({ qualiScore: -1 })
+            return Quali.find({ raceName })
         },
         sprint: async (parent, { raceName }) => {
             return Sprint.find({ raceName })
         },
         race: async (parent, { raceName }) => {
-            return Race.find({ raceName }).sort({ raceScore: -1 })
+            return Race.find({ raceName })
+        },
+        freeAgents: async () => {
+            return Driver.find({ drafted: false })
+                .populate("quali")
+                .populate("sprint")
+                .populate("race")
+                .populate("teammate")
         }
     },
     Mutation: {
@@ -246,6 +310,15 @@ const resolvers = {
             const user = await User.create(args)
             const token = signToken(user)
             return { token, user }
+        },
+        createLeague: async (parents, { leagueName, inviteCode }, context) => {
+            const user = await User.find(context.user)
+            if (context.user) {
+                const newLeague = await League.create({ leagueName, inviteCode, users: user })
+                return newLeague
+            } else {
+                console.log("User must be logged in to create a new league")
+            }
         }
     }
 }
