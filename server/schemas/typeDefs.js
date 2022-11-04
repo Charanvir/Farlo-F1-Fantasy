@@ -29,7 +29,6 @@ const typeDefs = gql`
         _id: ID
         driverName: String
         team: String,
-        drafted: Boolean
         teammateName: String
         teammate: [Driver]
         quali: [Quali]
@@ -96,7 +95,7 @@ const typeDefs = gql`
         quali(raceName: String): [Quali]
         sprint(raceName: String): [Sprint]
         race(raceName: String): [Race]
-        freeAgents: [Driver]
+        freeAgents(leagueName: String, year: Float): [Driver]
     }
 
     type Mutation {

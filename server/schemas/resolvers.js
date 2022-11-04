@@ -321,12 +321,39 @@ const resolvers = {
         race: async (parent, { raceName }) => {
             return Race.find({ raceName })
         },
-        freeAgents: async () => {
-            return Driver.find({ drafted: false })
+        freeAgents: async (parents, { leagueName, year }) => {
+            const leagueData = await League.findOne({ leagueName, year })
+                .populate({
+                    path: "teams",
+                    populate: {
+                        path: "driverOne"
+                    }
+                }).populate({
+                    path: "teams",
+                    populate: {
+                        path: "driverTwo"
+                    }
+                }).clone();
+            const drivers = [];
+            for (let i = 0; i < leagueData.teams.length; i++) {
+                drivers.push(leagueData.teams[i].driverOne[0])
+                drivers.push(leagueData.teams[i].driverTwo[0])
+            }
+
+            const allDrivers = await Driver.find()
                 .populate("quali")
                 .populate("sprint")
                 .populate("race")
-                .populate("teammate")
+
+            function freeAgents(array1, array2) {
+                return array1.filter(object1 => {
+                    return !array2.some(object2 => {
+                        return object1.driverName === object2.driverName
+                    })
+                })
+            }
+            const freeAgentDrivers = (freeAgents(allDrivers, drivers))
+            return freeAgentDrivers;
         }
     },
     Mutation: {
