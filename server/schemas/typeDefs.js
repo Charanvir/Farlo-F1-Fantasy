@@ -82,7 +82,6 @@ const typeDefs = gql`
         loggedInUser: User
         allLeagues: [League]
         allUsers: [User]
-        allTeams: [Team]
         allDrivers: [Driver]
         allQuali: [Quali]
         allSprint: [Sprint]
