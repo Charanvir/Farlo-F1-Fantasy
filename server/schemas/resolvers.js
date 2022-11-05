@@ -411,6 +411,37 @@ const resolvers = {
             } else {
                 throw new AuthenticationError("User must be logged in to create a new league")
             }
+        },
+        addDriver: async (parents, { teamName, driverName }, context) => {
+            if (context.user) {
+                const driverData = await Driver.findOne({ driverName })
+                    .populate("quali")
+                    .populate("sprint")
+                    .populate("race")
+                // console.log(driverData)
+                const teamData = await Team.findOne({ teamName })
+                    .populate("driverOne")
+                    .populate("driverTwo")
+                if (teamData.driverOne.length === 0) {
+                    await Team.findOneAndUpdate(
+                        { teamName },
+                        { $addToSet: { driverOne: driverData } },
+                        { new: true }
+                    )
+                    return teamData
+                } else if (teamData.driverOne.length > 0 && teamData.driverTwo.length === 0) {
+                    await Team.findOneAndUpdate(
+                        { teamName },
+                        { $addToSet: { driverTwo: driverData } },
+                        { new: true }
+                    )
+                    return teamData
+                } else {
+                    throw new AuthenticationError("Team already has the max number of drivers permitted")
+                }
+            } else {
+                throw new AuthenticationError("User must be logged in to add a driver")
+            }
         }
     }
 }

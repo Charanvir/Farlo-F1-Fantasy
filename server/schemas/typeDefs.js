@@ -102,6 +102,7 @@ const typeDefs = gql`
         signUp(username: String!, email: String!, password: String!): Auth
         createLeague(leagueName: String!, inviteCode: String!, teamName: String!): League
         joinLeague(inviteCode: String!, teamName: String!): League
+        addDriver(teamName: String!, driverName: String!): Team
     }
 `
 
