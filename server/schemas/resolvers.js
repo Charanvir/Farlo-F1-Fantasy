@@ -7,9 +7,25 @@ const resolvers = {
         loggedInUser: async (parent, args, context) => {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
-                    .populate('driverOne').populate("driverTwo");
-
-                return userData;
+                if (!userData.admin) {
+                    const nonAdminUserData = await User.findOne({ _id: context.user._id })
+                        .populate({
+                            path: 'teams',
+                            populate: {
+                                path: 'driverOne'
+                            }
+                        })
+                        .populate({
+                            path: 'teams',
+                            populate: {
+                                path: 'driverTwo'
+                            }
+                        })
+                    return nonAdminUserData
+                } else {
+                    const admin = await User.findOne({ _id: context.user._id })
+                    return admin;
+                }
             }
         },
         allLeagues: async () => {

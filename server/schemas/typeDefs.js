@@ -7,6 +7,7 @@ const typeDefs = gql`
         username: String
         email: String
         teams: [Team]
+        admin: Boolean
     }
 
     type Team {

@@ -25,7 +25,11 @@ const userSchema = new Schema(
                 type: Schema.Types.ObjectId,
                 ref: "Team"
             }
-        ]
+        ],
+        admin: {
+            type: Boolean,
+            required: true
+        }
     },
     {
         toJSON: {
