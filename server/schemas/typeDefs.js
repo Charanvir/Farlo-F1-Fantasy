@@ -104,6 +104,7 @@ const typeDefs = gql`
         createLeague(leagueName: String!, inviteCode: String!, teamName: String!): League
         joinLeague(inviteCode: String!, teamName: String!): League
         addDriver(teamName: String!, driverName: String!): Team
+        addDropDriver(teamName: String!, driverToDrop: String!, driverToAdd: String!): Team
     }
 `
 

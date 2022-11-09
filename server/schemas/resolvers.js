@@ -458,6 +458,53 @@ const resolvers = {
             } else {
                 throw new AuthenticationError("User must be logged in to add a driver")
             }
+        },
+        addDropDriver: async (parents, { teamName, driverToDrop, driverToAdd }, context) => {
+            // validate on client-side that driverToDrop must be driverOne or driverTwo string value
+            if (context.user) {
+                const driverToAddData = await Driver.findOne({ driverName: driverToAdd })
+
+
+
+                if (driverToDrop === "driverOne") {
+                    await Team.findOneAndUpdate(
+                        { teamName },
+                        { $set: { driverOne: [] } },
+                        { new: true }
+                    )
+
+                    await Team.findOneAndUpdate(
+                        { teamName },
+                        { $addToSet: { driverOne: driverToAddData } },
+                        { new: true }
+                    )
+                }
+
+                if (driverToDrop === "driverTwo") {
+                    await Team.findOneAndUpdate(
+                        { teamName },
+                        { $set: { driverTwo: [] } },
+                        { new: true }
+                    )
+
+                    await Team.findOneAndUpdate(
+                        { teamName },
+                        { $addToSet: { driverTwo: driverToAddData } },
+                        { new: true }
+                    )
+                }
+
+
+
+                const teamData = await Team.findOne({ teamName })
+                    .populate("driverOne")
+                    .populate("driverTwo")
+
+
+                return teamData
+            } else {
+                throw new AuthenticationError("User must be logged in to do this functionality")
+            }
         }
     }
 }
