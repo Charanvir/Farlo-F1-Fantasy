@@ -107,6 +107,27 @@ const typeDefs = gql`
         roundFinish: Float 
     }
 
+    input SprintData {
+        driverName: String
+        raceName: String
+        sprintRacePosition: Float
+        didNotFinish: Boolean
+        aheadOfTeammate: Boolean
+        disquaified: Boolean
+        startPosition: Float
+    }
+
+    input RaceData {
+        driverName: String
+        raceName: String
+        racePosition: Float
+        didNotFinish: Boolean
+        aheadOfTeammate: Boolean
+        fastestLap: Boolean
+        disqualified: Boolean
+        startPosition: Float
+    }
+
     type Mutation {
         login(email: String!, password: String!): Auth
         signUp(username: String!, email: String!, password: String!): Auth
@@ -115,6 +136,8 @@ const typeDefs = gql`
         addDriver(teamName: String!, driverName: String!): Team
         addDropDriver(teamName: String!, driverToDrop: String!, driverToAdd: String!): Team
         addQualiData(qualiData: QualiData): Quali
+        addSprintData(sprintData: SprintData): Sprint
+        addRaceData(raceData: RaceData): Race
     }
 `
 

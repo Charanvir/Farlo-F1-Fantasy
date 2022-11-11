@@ -510,11 +510,11 @@ const resolvers = {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
                 if (userData.admin) {
-                    await addData();
+                    const data = await addData();
                     console.log("Admin has seeded new quali data")
+                    return data
                 } else {
-                    console.log("Only admins may add new quali data");
-                    return
+                    throw new AuthenticationError("Only an admin can add quali data")
                 }
             } else {
                 throw new AuthenticationError("Admin must be logged in to add quali data")
@@ -528,7 +528,48 @@ const resolvers = {
                 )
                 return qualiData
             }
-
+        },
+        addSprintData: async (parents, args, context) => {
+            if (context.user) {
+                const userData = await User.findOne({ _id: context.user._id });
+                if (userData.admin) {
+                    const data = await addData();
+                    console.log("Admin seeded new sprint data");
+                    return data;
+                } else {
+                    throw new AuthenticationError("Only an admin can add sprint data");
+                }
+            }
+            async function addData() {
+                const sprintData = await Sprint.create(args.sprintData)
+                await Driver.findOneAndUpdate(
+                    { driverName: args.sprintData.driverName },
+                    { $push: { sprint: sprintData } },
+                    { new: true }
+                )
+                return sprintData
+            }
+        },
+        addRaceData: async (parents, args, context) => {
+            if (context.user) {
+                const userData = await User.findOne({ _id: context.user._id });
+                if (userData.admin) {
+                    const data = await addData();
+                    console.log("Admin seeded new race data");
+                    return data;
+                } else {
+                    throw new AuthenticationError("Only an admin can add race data");
+                }
+            }
+            async function addData() {
+                const raceData = await Race.create(args.raceData)
+                await Driver.findOneAndUpdate(
+                    { driverName: args.raceData.driverName },
+                    { $push: { race: raceData } },
+                    { new: true }
+                )
+                return raceData;
+            }
         }
     }
 }
