@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // user data
 const CharanvirData = {
     username: "charanvir",
@@ -51,7 +53,7 @@ const ManroopData = {
 const adminAccount = {
     username: "f1_admin",
     email: "charanvir123@gmail.com",
-    password: "nf0932u3g0934oifg",
+    password: process.env.ADMIN_PASSWORD,
     admin: true
 }
 const userData = []
