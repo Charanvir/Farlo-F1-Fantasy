@@ -505,6 +505,30 @@ const resolvers = {
             } else {
                 throw new AuthenticationError("User must be logged in to do this functionality")
             }
+        },
+        addQualiData: async (parents, args, context) => {
+            if (context.user) {
+                const userData = await User.findOne({ _id: context.user._id })
+                if (userData.admin) {
+                    await addData();
+                    console.log("Admin has seeded new quali data")
+                } else {
+                    console.log("Only admins may add new quali data");
+                    return
+                }
+            } else {
+                throw new AuthenticationError("Admin must be logged in to add quali data")
+            }
+            async function addData() {
+                const qualiData = await Quali.create(args.qualiData)
+                await Driver.findOneAndUpdate(
+                    { driverName: args.qualiData.driverName },
+                    { $push: { quali: qualiData } },
+                    { new: true }
+                )
+                return qualiData
+            }
+
         }
     }
 }

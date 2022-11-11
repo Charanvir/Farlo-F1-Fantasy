@@ -98,6 +98,15 @@ const typeDefs = gql`
         freeAgents(leagueName: String, year: Float): [Driver]
     }
 
+    input QualiData {
+        driverName: String
+        raceName: String
+        qualiFinishPosition: Float
+        didNotFinish: Boolean
+        aheadOfTeammate: Boolean
+        roundFinish: Float 
+    }
+
     type Mutation {
         login(email: String!, password: String!): Auth
         signUp(username: String!, email: String!, password: String!): Auth
@@ -105,6 +114,7 @@ const typeDefs = gql`
         joinLeague(inviteCode: String!, teamName: String!): League
         addDriver(teamName: String!, driverName: String!): Team
         addDropDriver(teamName: String!, driverToDrop: String!, driverToAdd: String!): Team
+        addQualiData(qualiData: QualiData): Quali
     }
 `
 
