@@ -16,6 +16,7 @@ const typeDefs = gql`
         driverOne: [Driver]
         driverTwo: [Driver]
         teamScore: Float
+        league: [League]
     }
 
     type League {
@@ -89,6 +90,7 @@ const typeDefs = gql`
         allRace: [Race]
         leagueInviteCode(inviteCode: String!): League
         pastLeagueResults(leagueName: String, year: Float): League
+        leagueById(_id: String): League
         user(username: String!): User
         team(teamName: String!): Team
         driver(driverName: String): Driver

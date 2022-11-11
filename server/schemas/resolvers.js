@@ -268,6 +268,63 @@ const resolvers = {
                     }
                 })
         },
+        leagueById: async (parent, _id) => {
+            return await League.findById(_id)
+                .populate({
+                    path: "teams",
+                    populate: {
+                        path: "driverOne",
+                        populate: {
+                            path: "quali"
+                        }
+                    }
+                })
+                .populate({
+                    path: "teams",
+                    populate: {
+                        path: "driverOne",
+                        populate: {
+                            path: "sprint"
+                        }
+                    }
+                })
+                .populate({
+                    path: "teams",
+                    populate: {
+                        path: "driverOne",
+                        populate: {
+                            path: "race"
+                        }
+                    }
+                })
+                .populate({
+                    path: "teams",
+                    populate: {
+                        path: "driverTwo",
+                        populate: {
+                            path: "quali"
+                        }
+                    }
+                })
+                .populate({
+                    path: "teams",
+                    populate: {
+                        path: "driverTwo",
+                        populate: {
+                            path: "sprint"
+                        }
+                    }
+                })
+                .populate({
+                    path: "teams",
+                    populate: {
+                        path: "driverTwo",
+                        populate: {
+                            path: "race"
+                        }
+                    }
+                })
+        },
         user: async (parent, { username }) => {
             return User.findOne({ username })
                 .populate({
@@ -324,6 +381,46 @@ const resolvers = {
                         }
                     }
                 })
+        },
+        team: async (parent, { teamName }) => {
+            return Team.findOne({ teamName })
+                .populate({
+                    path: 'driverOne',
+                    populate: {
+                        path: "quali"
+                    }
+                })
+                .populate({
+                    path: 'driverOne',
+                    populate: {
+                        path: "sprint"
+                    }
+                })
+                .populate({
+                    path: 'driverOne',
+                    populate: {
+                        path: "race"
+                    }
+                })
+                .populate({
+                    path: 'driverTwo',
+                    populate: {
+                        path: "quali"
+                    }
+                })
+                .populate({
+                    path: 'driverTwo',
+                    populate: {
+                        path: "sprint"
+                    }
+                })
+                .populate({
+                    path: 'driverTwo',
+                    populate: {
+                        path: "race"
+                    }
+                })
+                .populate('league')
         },
         driver: async (parent, { driverName }) => {
             return Driver.findOne({ driverName }).populate("quali").populate("sprint").populate("race").populate("teammate")
@@ -392,22 +489,31 @@ const resolvers = {
         },
         createLeague: async (parents, { leagueName, inviteCode, teamName }, context) => {
             if (context.user) {
-                const newTeam = await Team.create({ teamName, driverOne: [], driverTwo: [] })
+                const newTeam = await Team.create({ teamName, driverOne: [], driverTwo: [], league: [] })
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
                     { $addToSet: { teams: newTeam } },
                     { new: true }
                 )
                 const newLeague = await League.create({ leagueName, inviteCode, teams: newTeam })
+                addLeagueToTeam(newLeague, newTeam._id)
                 return newLeague
             } else {
                 throw new AuthenticationError("User must be logged in to create a new league")
+            }
+            async function addLeagueToTeam(leagueData, teamId) {
+                await Team.findOneAndUpdate(
+                    { _id: teamId },
+                    { $push: { league: leagueData } },
+                    { new: true }
+                )
+                console.log("League added to Team")
             }
 
         },
         joinLeague: async (parents, { inviteCode, teamName }, context) => {
             if (context.user) {
-                const newTeam = await Team.create({ teamName, driverOne: [], driverTwo: [] })
+                const newTeam = await Team.create({ teamName, driverOne: [], driverTwo: [], league: [] })
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
                     { $addToSet: { teams: newTeam } },

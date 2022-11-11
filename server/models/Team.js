@@ -18,6 +18,12 @@ const teamSchema = new Schema(
                 type: Schema.Types.ObjectId,
                 ref: "Driver"
             }
+        ],
+        league: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "League"
+            }
         ]
     },
     {
