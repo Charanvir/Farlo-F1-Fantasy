@@ -21,6 +21,12 @@ const resolvers = {
                                 path: 'driverTwo'
                             }
                         })
+                        .populate({
+                            path: 'teams',
+                            populate: {
+                                path: 'league'
+                            }
+                        })
                     return nonAdminUserData
                 } else {
                     const admin = await User.findOne({ _id: context.user._id })
@@ -379,6 +385,12 @@ const resolvers = {
                         populate: {
                             path: "race"
                         }
+                    }
+                })
+                .populate({
+                    path: 'teams',
+                    populate: {
+                        path: "league"
                     }
                 })
         },
