@@ -35,4 +35,6 @@ The following application is covered under the MIT License
 
 ## Great Developers Who Have Worked On This Application
 
+Charanvir Singh [Github](https://github.com/Charanvir/)
+
 Manveer Sohal [Github](https://github.com/manveer-sohal)
