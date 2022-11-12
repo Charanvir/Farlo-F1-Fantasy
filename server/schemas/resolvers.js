@@ -529,9 +529,18 @@ const resolvers = {
                         { new: true }
                     )
                 }
+                addLeagueToTeam(leagueToJoin, newTeam._id)
                 return leagueToJoin
             } else {
                 throw new AuthenticationError("User must be logged in to create a new league")
+            }
+            async function addLeagueToTeam(leagueData, teamId) {
+                await Team.findOneAndUpdate(
+                    { _id: teamId },
+                    { $push: { league: leagueData } },
+                    { new: true }
+                )
+                console.log("League added to Team")
             }
         },
         addDriver: async (parents, { teamName, driverName }, context) => {

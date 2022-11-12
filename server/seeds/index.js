@@ -303,6 +303,17 @@ db.once('open', async () => {
         console.log("Teams Added to League");
         console.log("***************************************");
 
+        const leagueDataToAddToTeam = await League.findOne({ teamName: "Farlo Fantasy" }).clone();
+        for (let i = 0; i < teamData.length; i++) {
+            const team = await Team.findOneAndUpdate(
+                { teamName: teamData[i].teamName },
+                { $addToSet: { league: leagueDataToAddToTeam } },
+                { new: true }
+            )
+        }
+        console.log("League Added to Teams");
+        console.log("***************************************");
+
         console.log("Database seeded");
         console.log("***************************************");
     }

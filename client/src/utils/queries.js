@@ -125,6 +125,18 @@ export const PAST_LEAGUE_RESULTS = gql`
             driverOne {
                 driverName
                 driverScore
+                quali {
+                    _id
+                    qualiScore
+                }
+                sprint {
+                    _id
+                    sprintScore
+                }
+                race {
+                    _id
+                    raceScore
+                }
             }
             driverTwo {
                 driverName
